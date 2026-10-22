@@ -1,1056 +1,1216 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Syed Nayeem | Sr. US IT Recruiter</title>
-  <meta name="description" content="Portfolio of Syed Nayeem - Senior US IT Recruiter specializing in End-to-End Talent Acquisition, AI-driven recruiting workflows, and enterprise client delivery.">
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              400: '#38bdf8',
-              500: '#0ea5e9',
-              600: '#0284c7',
-            }
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    body {
-      background-color: #030712;
-    }
-    .typing-cursor::after {
-      content: '|';
-      display: inline-block;
-      margin-left: 2px;
-      animation: blink 0.8s infinite;
-      color: #38bdf8;
-    }
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
-    @keyframes floatSlow {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-4px); }
-    }
-    .metric-float {
-      animation: floatSlow 4s ease-in-out infinite;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syed Nayeem | Sr. US IT Recruiter</title>
+<meta name="description" content="Portfolio of Syed Nayeem - Senior US IT Recruiter specializing in Full Cycle / End to End Recruitment, AI-driven recruiting workflows, and enterprise client delivery.">
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+tailwind.config = {
+darkMode: 'class',
+theme: {
+extend: {
+colors: {
+brand: {
+400: '#38bdf8',
+500: '#0ea5e9',
+600: '#0284c7',
+}
+}
+}
+}
+}
+</script>
+<style>
+body {
+background-color: #030712;
+overflow-x: hidden;
+}
+canvas#galaxyCanvas {
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+pointer-events: none;
+z-index: 0;
+}
+.typing-cursor::after {
+content: '|';
+display: inline-block;
+margin-left: 2px;
+animation: blink 0.8s infinite;
+color: #38bdf8;
+}
+@keyframes blink {
+0%, 100% { opacity: 1; }
+50% { opacity: 0; }
+}
+@keyframes floatSlow {
+0%, 100% { transform: translateY(0px); }
+50% { transform: translateY(-4px); }
+}
+.metric-float {
+animation: floatSlow 4s ease-in-out infinite;
+}
+.card-glass {
+background: rgba(10, 15, 29, 0.75);
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+border: 1px solid rgba(23, 34, 59, 0.85);
+}
+.card-glass:hover {
+border-color: rgba(56, 189, 248, 0.4);
+}
+</style>
 </head>
-<body class="text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
+<body class="text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white relative min-h-screen">
 
-  <!-- Top Sticky Navigation Bar -->
-  <header class="sticky top-0 z-50 backdrop-blur-md bg-[#030712]/90 border-b border-[#17223b]">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 py-3 flex items-center justify-between">
-      
-      <!-- Logo Header: Avatar Badge + SYED NAYEEM + SR. US IT RECRUITER -->
-      <a href="#hero" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-500 to-sky-400 flex items-center justify-center font-extrabold text-white text-base tracking-tight shadow-md shadow-blue-500/20">
-          SN
-        </div>
-        <div class="flex flex-col text-left">
-          <span class="text-lg font-black tracking-tight text-white group-hover:text-sky-400 transition leading-tight">
-            SYED NAYEEM
-          </span>
-          <span class="text-[10px] font-bold tracking-widest text-slate-400 uppercase leading-tight">
-            SR. US IT RECRUITER
-          </span>
-        </div>
-      </a>
+<!-- Interactive Galaxy & Spiderweb Constellation Canvas -->
+<canvas id="galaxyCanvas"></canvas>
 
-      <nav class="hidden lg:flex space-x-6 text-xs uppercase tracking-wider font-semibold text-slate-400">
-        <a href="#about" class="hover:text-white transition">About</a>
-        <a href="#industries" class="hover:text-white transition">Domains</a>
-        <a href="#experience" class="hover:text-white transition">Experience</a>
-        <a href="#expertise" class="hover:text-white transition">Expertise</a>
-        <a href="#technologies" class="hover:text-white transition">Positions</a>
-        <a href="#certifications" class="hover:text-white transition">Certifications</a>
-        <a href="#contact" class="hover:text-white transition">Contact</a>
-      </nav>
+<!-- Page Content Wrapper (Above Canvas) -->
+<div class="relative z-10">
 
-      <a href="https://calendar.app.google/2A5CWPT3bHL5L34E7" target="_blank" rel="noopener noreferrer" 
-         class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-500 hover:to-sky-400 text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg transition shadow-lg shadow-sky-500/20">
-        <i data-lucide="calendar" class="w-4 h-4"></i>
-        <span>Book a Meeting</span>
-      </a>
-    </div>
-  </header>
+<!-- Top Sticky Navigation Bar -->
+<header class="sticky top-0 z-50 backdrop-blur-md bg-[#030712]/90 border-b border-[#17223b]">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 py-3 flex items-center justify-between">
+<!-- Logo Header -->
+<a href="#hero" class="flex items-center gap-3 group">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-500 to-sky-400 flex items-center justify-center font-extrabold text-white text-base tracking-tight shadow-md shadow-blue-500/20">
+SN
+</div>
+<div class="flex flex-col text-left">
+<span class="text-lg font-black tracking-tight text-white group-hover:text-sky-400 transition leading-tight">
+SYED NAYEEM
+</span>
+<span class="text-[10px] font-bold tracking-widest text-slate-400 uppercase leading-tight">
+SR. US IT RECRUITER
+</span>
+</div>
+</a>
 
-  <!-- Hero Section -->
-  <section id="hero" class="relative pt-20 pb-16 md:pt-24 md:pb-20 border-b border-[#17223b] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-950/40 via-[#030712] to-[#030712]">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      
-      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0a0f1d] border border-[#17223b] text-sky-400 text-xs sm:text-sm font-medium mb-6 shadow-inner">
-        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-        Open to U.S. IT Staffing & Domestic Talent Acquisition
-      </div>
-      
-      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-sky-400 mb-3 drop-shadow-sm">
-        SYED NAYEEM
-      </h1>
-      <p class="text-xl sm:text-2xl font-bold tracking-wide text-white mb-2">
-        Sr. US IT Recruiter
-      </p>
-      <p class="text-sm sm:text-base font-medium text-slate-400 mb-6">
-        US IT Talent Acquisition Specialist • Strategic Sourcing & Executive Delivery
-      </p>
+<!-- Desktop Navigation -->
+<nav class="hidden lg:flex space-x-6 text-xs uppercase tracking-wider font-semibold text-slate-400">
+<a href="#hero" class="hover:text-white transition">Home</a>
+<a href="#about" class="hover:text-white transition">About</a>
+<a href="#experience" class="hover:text-white transition">Experience</a>
+<a href="#expertise" class="hover:text-white transition">Expertise</a>
+<a href="#technologies" class="hover:text-white transition">Positions</a>
+<a href="#certifications" class="hover:text-white transition">Certifications</a>
+<a href="#contact" class="hover:text-white transition">Contact</a>
+</nav>
 
-      <div class="flex flex-wrap justify-center gap-2 sm:gap-3 text-xs sm:text-sm text-slate-300 font-medium mb-8">
-        <span class="bg-[#0a0f1d] px-3.5 py-1.5 rounded-md border border-[#17223b]">Contract</span>
-        <span class="bg-[#0a0f1d] px-3.5 py-1.5 rounded-md border border-[#17223b]">Contract-to-Hire</span>
-        <span class="bg-[#0a0f1d] px-3.5 py-1.5 rounded-md border border-[#17223b]">Full-Time Hiring</span>
-        <span class="bg-[#0a0f1d] px-3.5 py-1.5 rounded-md border border-[#17223b]">AI-Powered Recruiting</span>
-        <span class="bg-[#0a0f1d] px-3.5 py-1.5 rounded-md border border-[#17223b]">Leadership Search</span>
-      </div>
+<div class="flex items-center gap-2">
+<a href="https://calendar.app.google/2A5CWPT3bHL5L34E7" target="_blank" rel="noopener noreferrer"
+class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-500 hover:to-sky-400 text-white text-xs sm:text-sm font-semibold px-3 sm:px-4 py-2 rounded-lg transition shadow-lg shadow-sky-500/20">
+<i data-lucide="calendar" class="w-4 h-4"></i>
+<span class="hidden sm:inline">Book a Meeting</span>
+<span class="sm:hidden">Meet</span>
+</a>
 
-      <blockquote class="max-w-3xl mx-auto text-base sm:text-lg text-slate-400 italic mb-10 leading-relaxed">
-        &ldquo;Connecting top technology talent with innovative organizations through strategic sourcing, AI-powered recruitment workflows, and end-to-end talent acquisition.&rdquo;
-      </blockquote>
+<!-- Mobile Menu Button -->
+<button id="mobileMenuBtn" onclick="toggleMobileNav()" class="lg:hidden p-2 text-slate-400 hover:text-white focus:outline-none">
+<i data-lucide="menu" id="menuIcon" class="w-6 h-6"></i>
+</button>
+</div>
+</div>
 
-      <!-- Visual Highlights Card Grid -->
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto mb-10 text-left">
-        <div class="p-5 bg-[#0a0f1d] border border-[#17223b] rounded-2xl shadow-sm">
-          <div class="text-3xl sm:text-4xl font-extrabold text-[#818cf8] mb-1">5+</div>
-          <div class="text-xs sm:text-sm font-bold tracking-wider text-slate-200 uppercase mb-1">Years Experience</div>
-          <p class="text-xs text-slate-400">U.S. IT Recruitment lifecycle</p>
-        </div>
-        <div class="p-5 bg-[#0a0f1d] border border-[#17223b] rounded-2xl shadow-sm">
-          <div class="text-3xl sm:text-4xl font-extrabold text-[#38bdf8] mb-1">Full</div>
-          <div class="text-xs sm:text-sm font-bold tracking-wider text-slate-200 uppercase mb-1">Cycle Delivery</div>
-          <p class="text-xs text-slate-400">Source-to-Offer execution</p>
-        </div>
-        <div class="p-5 bg-[#0a0f1d] border border-[#17223b] rounded-2xl shadow-sm">
-          <div class="text-3xl sm:text-4xl font-extrabold text-[#a78bfa] mb-1">AI</div>
-          <div class="text-xs sm:text-sm font-bold tracking-wider text-slate-200 uppercase mb-1">Powered Workflows</div>
-          <p class="text-xs text-slate-400">Copilot, Gemini & GPT-4</p>
-        </div>
-        <div class="p-5 bg-[#0a0f1d] border border-[#17223b] rounded-2xl shadow-sm">
-          <div class="text-3xl sm:text-4xl font-extrabold text-[#34d399] mb-1">100%</div>
-          <div class="text-xs sm:text-sm font-bold tracking-wider text-slate-200 uppercase mb-1">US SLA Alignment</div>
-          <p class="text-xs text-slate-400">W2, C2C & 1099 compliance</p>
-        </div>
-      </div>
-      
-      <!-- Action Buttons -->
-      <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=syednayeem.work@gmail.com" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center gap-2 bg-[#0a0f1d] hover:bg-[#111c38] text-white text-sm font-semibold px-4 py-2.5 rounded-lg border border-[#17223b] hover:border-sky-500/60 transition shadow-sm">
-          <i data-lucide="mail" class="w-4 h-4 text-sky-400"></i>
-          <span>Email Me</span>
-        </a>
-        <a href="https://www.linkedin.com/in/syed-nayeem/" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center gap-2 bg-[#0a0f1d] hover:bg-[#111c38] text-white text-sm font-semibold px-4 py-2.5 rounded-lg border border-[#17223b] hover:border-sky-500/60 transition shadow-sm">
-          <i data-lucide="linkedin" class="w-4 h-4 text-sky-400"></i>
-          <span>LinkedIn Profile</span>
-        </a>
-        <a href="https://wa.me/916303892404" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center gap-2 bg-[#0a0f1d] hover:bg-[#111c38] text-white text-sm font-semibold px-4 py-2.5 rounded-lg border border-[#17223b] hover:border-sky-500/60 transition shadow-sm">
-          <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
-          <span>WhatsApp</span>
-        </a>
-        <a href="tel:+916303892404"
-           class="inline-flex items-center gap-2 bg-[#0a0f1d] hover:bg-[#111c38] text-white text-sm font-semibold px-4 py-2.5 rounded-lg border border-[#17223b] hover:border-sky-500/60 transition shadow-sm">
-          <i data-lucide="phone" class="w-4 h-4 text-amber-400"></i>
-          <span>+91 6303892404</span>
-        </a>
-      </div>
-    </div>
-  </section>
+<!-- Mobile Nav Dropdown -->
+<div id="mobileNav" class="hidden lg:hidden bg-[#060a14]/95 backdrop-blur-lg border-b border-[#17223b] px-6 py-4 space-y-3 text-xs uppercase tracking-wider font-semibold text-slate-300">
+<a href="#hero" onclick="toggleMobileNav()" class="block hover:text-sky-400 transition">Home</a>
+<a href="#about" onclick="toggleMobileNav()" class="block hover:text-sky-400 transition">About</a>
+<a href="#experience" onclick="toggleMobileNav()" class="block hover:text-sky-400 transition">Experience</a>
+<a href="#expertise" onclick="toggleMobileNav()" class="block hover:text-sky-400 transition">Expertise</a>
+<a href="#technologies" onclick="toggleMobileNav()" class="block hover:text-sky-400 transition">Positions</a>
+<a href="#certifications" onclick="toggleMobileNav()" class="block hover:text-sky-400 transition">Certifications</a>
+<a href="#contact" onclick="toggleMobileNav()" class="block hover:text-sky-400 transition">Contact</a>
+</div>
+</header>
 
-  <!-- About & Professional Summary -->
-  <section id="about" class="py-16 md:py-20 border-b border-[#17223b] bg-[#030712]">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center gap-3 mb-6">
-        <i data-lucide="user-check" class="w-6 h-6 text-sky-400"></i>
-        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">About & Professional Summary</h2>
-      </div>
-      <div class="bg-[#0a0f1d] border border-[#17223b] rounded-2xl p-6 sm:p-8 text-slate-300 leading-relaxed space-y-4 shadow-xl">
-        <p class="text-base sm:text-lg">
-          Senior Technical Recruiter with <span class="text-white font-semibold">5+ years of experience in U.S. IT recruitment</span>, specializing in <span class="text-white font-semibold">end-to-end recruitment (source to offer)</span> across <span class="text-white font-semibold">W2, C2C, 1099, Contract-to-Hire, and Full-Time</span> hiring models. Experienced in supporting <span class="text-white font-semibold">Fortune 500 clients, direct client accounts, Tier-1 vendors, MSP/VMS programs, and implementation partners</span> across Banking, Financial Services, Healthcare, Telecom, Retail, Utilities, Education, Government, and Technology sectors.
-        </p>
-        <p class="text-sm sm:text-base text-slate-300">
-          Strong hands-on expertise in <span class="text-white font-semibold">talent sourcing, candidate screening, technical alignment, client submissions, rate negotiations, US work authorization verification</span>, and placement logistics. Power user of <span class="text-white font-semibold">LinkedIn Recruiter, CEIPAL, Beeline, SAP Fieldglass, Dice, Monster, Prohires, SignalHire</span>, and advanced Boolean/Google X-Ray techniques.
-        </p>
-        <p class="text-sm sm:text-base text-slate-300">
-          Leverages Generative AI (<span class="text-white font-semibold">Microsoft Copilot, ChatGPT, Google Gemini, and custom AI agents</span>) for JD analysis, resume parsing, candidate-job matching, skill-gap identification, personalized outreach, and workflow automation. Committed to continuous professional development in <span class="text-white font-semibold">skills-first talent acquisition</span> and advanced sourcing strategies.
-        </p>
-      </div>
-    </div>
-  </section>
+<!-- Hero Section -->
+<section id="hero" class="relative pt-20 pb-16 md:pt-24 md:pb-20 border-b border-[#17223b]/60">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full card-glass text-sky-400 text-xs sm:text-sm font-medium mb-6 shadow-inner">
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+Open to U.S. IT Staffing & Domestic Talent Acquisition
+</div>
+<h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-sky-400 mb-3 drop-shadow-sm">
+SYED NAYEEM
+</h1>
+<p class="text-xl sm:text-2xl font-bold tracking-wide text-white mb-2">
+Sr. US IT Recruiter
+</p>
+<p class="text-sm sm:text-base font-medium text-slate-400 mb-6">
+US IT Talent Acquisition Specialist • Strategic Sourcing & Executive Delivery
+</p>
 
-  <!-- Industry Domains Supported -->
-  <section id="industries" class="py-16 md:py-20 border-b border-[#17223b]">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center gap-3 mb-6">
-        <i data-lucide="globe" class="w-6 h-6 text-sky-400"></i>
-        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Industry Domains Supported</h2>
-      </div>
-      <p class="text-slate-400 text-sm sm:text-base mb-8 max-w-2xl">
-        Extensive cross-industry recruitment background delivering niche technical, functional, and leadership requisitions across major enterprise verticals:
-      </p>
+<div class="flex flex-wrap justify-center gap-2 sm:gap-3 text-xs sm:text-sm text-slate-300 font-medium mb-8">
+<span class="card-glass px-3.5 py-1.5 rounded-md">Contract</span>
+<span class="card-glass px-3.5 py-1.5 rounded-md">Contract-to-Hire</span>
+<span class="card-glass px-3.5 py-1.5 rounded-md">Full-Time Hiring</span>
+<span class="card-glass px-3.5 py-1.5 rounded-md">AI-Powered Recruiting</span>
+<span class="card-glass px-3.5 py-1.5 rounded-md">Leadership Search</span>
+</div>
 
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5">
-        <div class="p-4 bg-[#0a0f1d] border border-[#17223b] rounded-xl text-center hover:border-sky-500/50 transition group">
-          <i data-lucide="radio" class="w-5 h-5 mx-auto mb-2 text-sky-400 group-hover:scale-110 transition"></i>
-          <span class="text-sm font-semibold text-slate-200">Telecom</span>
-        </div>
-        <div class="p-4 bg-[#0a0f1d] border border-[#17223b] rounded-xl text-center hover:border-sky-500/50 transition group">
-          <i data-lucide="landmark" class="w-5 h-5 mx-auto mb-2 text-sky-400 group-hover:scale-110 transition"></i>
-          <span class="text-sm font-semibold text-slate-200">Banking</span>
-        </div>
-        <div class="p-4 bg-[#0a0f1d] border border-[#17223b] rounded-xl text-center hover:border-sky-500/50 transition group">
-          <i data-lucide="circle-dollar-sign" class="w-5 h-5 mx-auto mb-2 text-emerald-400 group-hover:scale-110 transition"></i>
-          <span class="text-sm font-semibold text-slate-200">Finance</span>
-        </div>
-        <div class="p-4 bg-[#0a0f1d] border border-[#17223b] rounded-xl text-center hover:border-sky-500/50 transition group">
-          <i data-lucide="heart-pulse" class="w-5 h-5 mx-auto mb-2 text-rose-400 group-hover:scale-110 transition"></i>
-          <span class="text-sm font-semibold text-slate-200">Healthcare</span>
-        </div>
-        <div class="p-4 bg-[#0a0f1d] border border-[#17223b] rounded-xl text-center hover:border-sky-500/50 transition group">
-          <i data-lucide="plane" class="w-5 h-5 mx-auto mb-2 text-indigo-400 group-hover:scale-110 transition"></i>
-          <span class="text-sm font-semibold text-slate-200">Aerospace</span>
-        </div>
-        <div class="p-4 bg-[#0a0f1d] border border-[#17223b] rounded-xl text-center hover:border-sky-500/50 transition group">
-          <i data-lucide="zap" class="w-5 h-5 mx-auto mb-2 text-amber-400 group-hover:scale-110 transition"></i>
-          <span class="text-sm font-semibold text-slate-200">Utilities</span>
-        </div>
-        <div class="p-4 bg-[#0a0f1d] border border-[#17223b] rounded-xl text-center hover:border-sky-500/50 transition group">
-          <i data-lucide="shopping-bag" class="w-5 h-5 mx-auto mb-2 text-purple-400 group-hover:scale-110 transition"></i>
-          <span class="text-sm font-semibold text-slate-200">Retail</span>
-        </div>
-        <div class="p-4 bg-[#0a0f1d] border border-[#17223b] rounded-xl text-center hover:border-sky-500/50 transition group">
-          <i data-lucide="graduation-cap" class="w-5 h-5 mx-auto mb-2 text-teal-400 group-hover:scale-110 transition"></i>
-          <span class="text-sm font-semibold text-slate-200">Education</span>
-        </div>
-        <div class="p-4 bg-[#0a0f1d] border border-[#17223b] rounded-xl text-center hover:border-sky-500/50 transition group">
-          <i data-lucide="shield" class="w-5 h-5 mx-auto mb-2 text-blue-400 group-hover:scale-110 transition"></i>
-          <span class="text-sm font-semibold text-slate-200">Government</span>
-        </div>
-        <div class="p-4 bg-[#0a0f1d] border border-[#17223b] rounded-xl text-center hover:border-sky-500/50 transition group">
-          <i data-lucide="building-2" class="w-5 h-5 mx-auto mb-2 text-slate-300 group-hover:scale-110 transition"></i>
-          <span class="text-sm font-semibold text-slate-200">State Clients</span>
-        </div>
-      </div>
-    </div>
-  </section>
+<blockquote class="max-w-3xl mx-auto text-base sm:text-lg text-slate-400 italic mb-10 leading-relaxed">
+&ldquo;Connecting top technology talent with innovative organizations through strategic sourcing, AI-powered recruitment workflows, and Full Cycle / End to End Recruitment.&rdquo;
+</blockquote>
 
-  <!-- Professional Experience Section -->
-  <section id="experience" class="py-16 md:py-20 border-b border-[#17223b]">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center gap-3 mb-10">
-        <i data-lucide="briefcase" class="w-6 h-6 text-sky-400"></i>
-        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Professional Experience</h2>
-      </div>
+<!-- Visual Highlights Card Grid -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto mb-10 text-left">
+<div class="p-5 card-glass rounded-2xl shadow-sm">
+<div class="text-3xl sm:text-4xl font-extrabold text-[#818cf8] mb-1">5+</div>
+<div class="text-xs sm:text-sm font-bold tracking-wider text-slate-200 uppercase mb-1">Years Experience</div>
+<p class="text-xs text-slate-400">U.S. IT Recruitment lifecycle</p>
+</div>
+<div class="p-5 card-glass rounded-2xl shadow-sm">
+<div class="text-3xl sm:text-4xl font-extrabold text-[#38bdf8] mb-1">Full</div>
+<div class="text-xs sm:text-sm font-bold tracking-wider text-slate-200 uppercase mb-1">Cycle Delivery</div>
+<p class="text-xs text-slate-400">Source-to-Offer execution</p>
+</div>
+<div class="p-5 card-glass rounded-2xl shadow-sm">
+<div class="text-3xl sm:text-4xl font-extrabold text-[#a78bfa] mb-1">AI</div>
+<div class="text-xs sm:text-sm font-bold tracking-wider text-slate-200 uppercase mb-1">Powered Workflows</div>
+<p class="text-xs text-slate-400">Copilot, Gemini & GPT-4</p>
+</div>
+<div class="p-5 card-glass rounded-2xl shadow-sm">
+<div class="text-3xl sm:text-4xl font-extrabold text-[#34d399] mb-1">100%</div>
+<div class="text-xs sm:text-sm font-bold tracking-wider text-slate-200 uppercase mb-1">US SLA Alignment</div>
+<p class="text-xs text-slate-400">W2, C2C & 1099 compliance</p>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=syednayeem.work@gmail.com" target="_blank" rel="noopener noreferrer"
+class="inline-flex items-center gap-2 card-glass hover:bg-[#111c38] text-white text-sm font-semibold px-4 py-2.5 rounded-lg border border-[#17223b] hover:border-sky-500/60 transition shadow-sm">
+<i data-lucide="mail" class="w-4 h-4 text-sky-400"></i>
+<span>Email Me</span>
+</a>
+<a href="https://www.linkedin.com/in/syed-nayeem/" target="_blank" rel="noopener noreferrer"
+class="inline-flex items-center gap-2 card-glass hover:bg-[#111c38] text-white text-sm font-semibold px-4 py-2.5 rounded-lg border border-[#17223b] hover:border-sky-500/60 transition shadow-sm">
+<i data-lucide="linkedin" class="w-4 h-4 text-sky-400"></i>
+<span>LinkedIn Profile</span>
+</a>
+<a href="https://wa.me/916303892404" target="_blank" rel="noopener noreferrer"
+class="inline-flex items-center gap-2 card-glass hover:bg-[#111c38] text-white text-sm font-semibold px-4 py-2.5 rounded-lg border border-[#17223b] hover:border-sky-500/60 transition shadow-sm">
+<i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+<span>WhatsApp</span>
+</a>
+<a href="tel:+916303892404"
+class="inline-flex items-center gap-2 card-glass hover:bg-[#111c38] text-white text-sm font-semibold px-4 py-2.5 rounded-lg border border-[#17223b] hover:border-sky-500/60 transition shadow-sm">
+<i data-lucide="phone" class="w-4 h-4 text-amber-400"></i>
+<span>+91 6303892404</span>
+</a>
+</div>
+</div>
+</section>
 
-      <div class="space-y-12">
+<!-- About & Professional Summary -->
+<section id="about" class="py-16 md:py-20 border-b border-[#17223b]/60">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-3 mb-6">
+<i data-lucide="user-check" class="w-6 h-6 text-sky-400"></i>
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">About & Professional Summary</h2>
+</div>
+<div class="card-glass rounded-2xl p-6 sm:p-8 text-slate-300 leading-relaxed space-y-4 shadow-xl">
+<p class="text-base sm:text-lg">
+Senior Technical Recruiter with <span class="text-white font-semibold">5+ years of experience in U.S. IT recruitment</span>, specializing in <span class="text-white font-semibold">Full Cycle / End to End Recruitment (source to offer)</span> across <span class="text-white font-semibold">W2, C2C, 1099, Contract-to-Hire, and Full-Time</span> hiring models. Experienced in supporting <span class="text-white font-semibold">Fortune 500 clients, direct client accounts, Tier-1 vendors, MSP/VMS programs, and implementation partners</span> across Banking, Financial Services, Healthcare, Telecom, Retail, Utilities, Education, Government, and Technology sectors.
+</p>
+<p class="text-sm sm:text-base text-slate-300">
+Strong hands-on expertise in <span class="text-white font-semibold">talent sourcing, candidate screening, technical alignment, client submissions, rate negotiations, US work authorization verification</span>, and placement logistics. Power user of <span class="text-white font-semibold">LinkedIn Recruiter, CEIPAL, Beeline, SAP Fieldglass, Dice, Monster, CareerBuilder, Prohires, SignalHire</span>, and advanced Boolean/Google X-Ray techniques.
+</p>
+<p class="text-sm sm:text-base text-slate-300">
+Leverages Generative AI (<span class="text-white font-semibold">Microsoft Copilot, ChatGPT, Google Gemini, and custom AI agents</span>) for JD analysis, resume parsing, candidate-job matching, skill-gap identification, personalized outreach, and workflow automation. Committed to continuous professional development in <span class="text-white font-semibold">skills-first talent acquisition</span> and advanced sourcing strategies.
+</p>
+</div>
+</div>
+</section>
 
-        <!-- 1. Siri InfoSolutions, Inc. -->
-        <div class="bg-[#0a0f1d] border border-[#17223b] rounded-2xl p-6 sm:p-8 shadow-xl">
-          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-1">
-            <span class="text-xs uppercase tracking-wider font-bold text-slate-400">EXPERIENCE • MAR 2025 — PRESENT</span>
-            <span class="text-xs font-semibold text-slate-400">Hyderabad, India</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white">Siri InfoSolutions, Inc.</h3>
-          <p class="text-sky-400 font-semibold mb-2">Senior Technical Recruiter</p>
-          <p class="text-xs text-slate-400 italic mb-4">Siri InfoSolutions is an IT consulting and professional staffing firm providing workforce solutions and technical talent delivery across enterprise organizations.</p>
-          <p class="text-sm sm:text-base text-slate-300 mb-6 leading-relaxed">
-            Delivering end-to-end U.S. IT recruitment from sourcing to offer, supporting Fortune 500 client engagements through quality-driven hiring, AI-powered sourcing, and stakeholder collaboration.
-          </p>
+<!-- Professional Experience Section -->
+<section id="experience" class="py-16 md:py-20 border-b border-[#17223b]/60">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-3 mb-10">
+<i data-lucide="briefcase" class="w-6 h-6 text-sky-400"></i>
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Professional Experience</h2>
+</div>
 
-          <!-- Floating Typing Metric Counters: Siri -->
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-5 border-y border-[#17223b] mb-6 bg-[#060a14] rounded-xl px-4">
-            <div class="text-center sm:text-left metric-float">
-              <div class="text-3xl font-black text-indigo-400 tracking-tight flex items-center justify-center sm:justify-start">
-                <span class="typing-text" data-text="7+"></span>
-              </div>
-              <div class="text-xs text-slate-400 mt-1">Placements to date</div>
-            </div>
-            <div class="text-center sm:text-left metric-float" style="animation-delay: 0.5s;">
-              <div class="text-3xl font-black text-sky-400 tracking-tight flex items-center justify-center sm:justify-start">
-                <span class="typing-text" data-text="5+"></span>
-              </div>
-              <div class="text-xs text-slate-400 mt-1">Candidate starts</div>
-            </div>
-            <div class="text-center sm:text-left metric-float" style="animation-delay: 1s;">
-              <div class="text-3xl font-black text-purple-400 tracking-tight flex items-center justify-center sm:justify-start">
-                <span class="typing-text" data-text="2–3+"></span>
-              </div>
-              <div class="text-xs text-slate-400 mt-1">Daily candidate submissions</div>
-            </div>
-            <div class="text-center sm:text-left metric-float" style="animation-delay: 1.5s;">
-              <div class="text-lg sm:text-xl font-bold text-emerald-400 tracking-tight flex items-center justify-center sm:justify-start">
-                <span class="typing-text" data-text="Weekly & monthly"></span>
-              </div>
-              <div class="text-xs text-slate-400 mt-1">Targets consistently met</div>
-            </div>
-          </div>
+<div class="space-y-12">
 
-          <!-- Recruitment Expertise Cards -->
-          <h4 class="text-xs uppercase tracking-wider font-bold text-slate-400 mb-3">Recruitment expertise</h4>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-            <div class="p-3.5 bg-[#0e172a]/70 border border-[#1e293b] rounded-xl">
-              <div class="flex items-center gap-2 font-bold text-white text-sm mb-1">
-                <i data-lucide="users" class="w-4 h-4 text-sky-400"></i>
-                End-to-End Recruitment
-              </div>
-              <p class="text-xs text-slate-400">Source to offer • W2 • C2C</p>
-            </div>
-            <div class="p-3.5 bg-[#0e172a]/70 border border-[#1e293b] rounded-xl">
-              <div class="flex items-center gap-2 font-bold text-white text-sm mb-1">
-                <i data-lucide="handshake" class="w-4 h-4 text-sky-400"></i>
-                Client Partnerships
-              </div>
-              <p class="text-xs text-slate-400">Implementation Partners • Tier-1 Vendors • BDMs • Account Managers</p>
-            </div>
-            <div class="p-3.5 bg-[#0e172a]/70 border border-[#1e293b] rounded-xl">
-              <div class="flex items-center gap-2 font-bold text-white text-sm mb-1">
-                <i data-lucide="sparkles" class="w-4 h-4 text-sky-400"></i>
-                AI-Powered Recruiting
-              </div>
-              <p class="text-xs text-slate-400">Microsoft Copilot • ChatGPT • AI agents</p>
-            </div>
-            <div class="p-3.5 bg-[#0e172a]/70 border border-[#1e293b] rounded-xl">
-              <div class="flex items-center gap-2 font-bold text-white text-sm mb-1">
-                <i data-lucide="shield-check" class="w-4 h-4 text-sky-400"></i>
-                Screening & Compliance
-              </div>
-              <p class="text-xs text-slate-400">Work authorization • VMS • ATS</p>
-            </div>
-          </div>
+<!-- 1. Siri InfoSolutions, Inc. -->
+<div class="card-glass rounded-2xl p-6 sm:p-8 shadow-xl">
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-1">
+<span class="text-xs uppercase tracking-wider font-bold text-slate-400">EXPERIENCE • MAR 2025 — PRESENT</span>
+<span class="text-xs font-semibold text-slate-400">Hyderabad, India</span>
+</div>
+<h3 class="text-2xl font-bold text-white">Siri InfoSolutions, Inc.</h3>
+<p class="text-sky-400 font-semibold mb-2">Senior Technical Recruiter</p>
+<p class="text-xs text-slate-400 italic mb-4">Siri InfoSolutions is an IT consulting and professional staffing firm providing workforce solutions and technical talent delivery across enterprise organizations.</p>
+<p class="text-sm sm:text-base text-slate-300 mb-6 leading-relaxed">
+Delivering Full Cycle / End to End Recruitment from sourcing to offer, supporting Fortune 500 client engagements through quality-driven hiring, AI-powered sourcing, and stakeholder collaboration.
+</p>
 
-          <!-- Responsibilities & Key Contributions -->
-          <h4 class="text-xs uppercase tracking-wider font-bold text-slate-400 mb-3">Responsibilities & Key Contributions</h4>
-          <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside leading-relaxed">
-            <li>Managed end-to-end recruitment (source to offer) for U.S. IT contract roles across W2 and C2C models, supporting Fortune 500 client accounts through Implementation Partners and Tier-1 vendors.</li>
-            <li>Sourced and placed talent across Software Engineering, Cloud, AI/ML, Data Engineering, ERP, Infrastructure, and Leadership roles.</li>
-            <li>Used CEIPAL, LinkedIn Recruiter, Dice, Monster, Prohires, SignalHire, vendor networks, Boolean search, and Google X-Ray to identify qualified and hard-to-find talent.</li>
-            <li>Integrated Microsoft Copilot, ChatGPT, and AI agents into workflows for JD analysis, resume parsing, candidate-to-job matching, outreach, and recruitment communication.</li>
-            <li>Conducted Microsoft Teams screenings and coordinated candidate evaluation, interview pipelines, rate/salary negotiations, offer acceptance, and placement follow-ups.</li>
-            <li>Managed Beeline/VMS submissions, ATS records, candidate documentation, and weekly/monthly recruitment reports while following work authorization and submission compliance procedures.</li>
-            <li>Maintained strong relationships with Account Managers, BDMs, and Delivery Managers to prioritize requirements, meet recruitment targets, and improve hiring outcomes.</li>
-          </ul>
-        </div>
+<!-- Floating Typing Metric Counters: Siri -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-5 border-y border-[#17223b] mb-6 bg-[#060a14]/60 rounded-xl px-4">
+<div class="text-center sm:text-left metric-float">
+<div class="text-3xl font-black text-indigo-400 tracking-tight flex items-center justify-center sm:justify-start">
+<span class="typing-text" data-text="7+"></span>
+</div>
+<div class="text-xs text-slate-400 mt-1">Placements to date</div>
+</div>
+<div class="text-center sm:text-left metric-float" style="animation-delay: 0.5s;">
+<div class="text-3xl font-black text-sky-400 tracking-tight flex items-center justify-center sm:justify-start">
+<span class="typing-text" data-text="5+"></span>
+</div>
+<div class="text-xs text-slate-400 mt-1">Candidate starts</div>
+</div>
+<div class="text-center sm:text-left metric-float" style="animation-delay: 1s;">
+<div class="text-3xl font-black text-purple-400 tracking-tight flex items-center justify-center sm:justify-start">
+<span class="typing-text" data-text="2–3+"></span>
+</div>
+<div class="text-xs text-slate-400 mt-1">Daily candidate submissions</div>
+</div>
+<div class="text-center sm:text-left metric-float" style="animation-delay: 1.5s;">
+<div class="text-lg sm:text-xl font-bold text-emerald-400 tracking-tight flex items-center justify-center sm:justify-start">
+<span class="typing-text" data-text="Weekly & monthly"></span>
+</div>
+<div class="text-xs text-slate-400 mt-1">Targets consistently met</div>
+</div>
+</div>
 
-        <!-- 2. USM Business Systems -->
-        <div class="bg-[#0a0f1d] border border-[#17223b] rounded-2xl p-6 sm:p-8 shadow-xl">
-          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-1">
-            <span class="text-xs uppercase tracking-wider font-bold text-slate-400">EXPERIENCE • MAY 2022 — MAR 2025</span>
-            <span class="text-xs font-semibold text-slate-400">Hyderabad, India</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white">USM Business Systems</h3>
-          <p class="text-sky-400 font-semibold mb-2">Senior Technical Recruiter</p>
-          <p class="text-xs text-slate-400 italic mb-4">USM Business Systems is a global digital transformation and IT staffing solutions provider serving government and commercial clients across North America.</p>
-          <p class="text-sm sm:text-base text-slate-300 mb-6 leading-relaxed">
-            From sourcing talent to coordinating interviews and placements, delivering end-to-end U.S. IT recruitment with a focus on quality, compliance, and AI-assisted workflows.
-          </p>
+<!-- Recruitment Expertise Cards -->
+<h4 class="text-xs uppercase tracking-wider font-bold text-slate-400 mb-3">Recruitment expertise</h4>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+<div class="p-3.5 bg-[#0e172a]/70 border border-[#1e293b] rounded-xl">
+<div class="flex items-center gap-2 font-bold text-white text-sm mb-1">
+<i data-lucide="users" class="w-4 h-4 text-sky-400"></i>
+Full Cycle / End to End Recruitment
+</div>
+<p class="text-xs text-slate-400">Source to offer • W2 • C2C</p>
+</div>
+<div class="p-3.5 bg-[#0e172a]/70 border border-[#1e293b] rounded-xl">
+<div class="flex items-center gap-2 font-bold text-white text-sm mb-1">
+<i data-lucide="handshake" class="w-4 h-4 text-sky-400"></i>
+Client Partnerships
+</div>
+<p class="text-xs text-slate-400">Implementation Partners • Tier-1 Vendors • BDMs • Account Managers</p>
+</div>
+<div class="p-3.5 bg-[#0e172a]/70 border border-[#1e293b] rounded-xl">
+<div class="flex items-center gap-2 font-bold text-white text-sm mb-1">
+<i data-lucide="sparkles" class="w-4 h-4 text-sky-400"></i>
+AI-Powered Recruiting
+</div>
+<p class="text-xs text-slate-400">Microsoft Copilot • ChatGPT • AI agents</p>
+</div>
+<div class="p-3.5 bg-[#0e172a]/70 border border-[#1e293b] rounded-xl">
+<div class="flex items-center gap-2 font-bold text-white text-sm mb-1">
+<i data-lucide="shield-check" class="w-4 h-4 text-sky-400"></i>
+Screening & Compliance
+</div>
+<p class="text-xs text-slate-400">Work authorization • VMS • ATS</p>
+</div>
+</div>
 
-          <!-- Floating Typing Metric Counters: USM -->
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-5 border-y border-[#17223b] mb-6 bg-[#060a14] rounded-xl px-4">
-            <div class="text-center sm:text-left metric-float">
-              <div class="text-3xl font-black text-indigo-400 tracking-tight flex items-center justify-center sm:justify-start">
-                <span class="typing-text" data-text="1,200+"></span>
-              </div>
-              <div class="text-xs text-slate-400 mt-1">Candidate submissions</div>
-            </div>
-            <div class="text-center sm:text-left metric-float" style="animation-delay: 0.5s;">
-              <div class="text-3xl font-black text-sky-400 tracking-tight flex items-center justify-center sm:justify-start">
-                <span class="typing-text" data-text="250+"></span>
-              </div>
-              <div class="text-xs text-slate-400 mt-1">Interviews coordinated</div>
-            </div>
-            <div class="text-center sm:text-left metric-float" style="animation-delay: 1s;">
-              <div class="text-3xl font-black text-purple-400 tracking-tight flex items-center justify-center sm:justify-start">
-                <span class="typing-text" data-text="17"></span>
-              </div>
-              <div class="text-xs text-slate-400 mt-1">Candidate confirmations</div>
-            </div>
-            <div class="text-center sm:text-left metric-float" style="animation-delay: 1.5s;">
-              <div class="text-3xl font-black text-emerald-400 tracking-tight flex items-center justify-center sm:justify-start">
-                <span class="typing-text" data-text="13"></span>
-              </div>
-              <div class="text-xs text-slate-400 mt-1">Candidate starts</div>
-            </div>
-          </div>
+<!-- Responsibilities & Key Contributions -->
+<h4 class="text-xs uppercase tracking-wider font-bold text-slate-400 mb-3">Responsibilities & Key Contributions</h4>
+<ul class="space-y-2 text-sm text-slate-300 list-disc list-inside leading-relaxed">
+<li>Managed Full Cycle / End to End Recruitment (source to offer) for U.S. IT contract roles across W2 and C2C models, supporting Fortune 500 client accounts through Implementation Partners and Tier-1 vendors.</li>
+<li>Sourced and placed talent across Software Engineering, Cloud, AI/ML, Data Engineering, ERP, Infrastructure, and Leadership roles.</li>
+<li>Used CEIPAL, LinkedIn Recruiter, Dice, Monster, CareerBuilder, Prohires, SignalHire, vendor networks, Boolean search, and Google X-Ray to identify qualified talent.</li>
+<li>Integrated Microsoft Copilot, ChatGPT, and AI agents into workflows for JD analysis, resume parsing, candidate matching, and outreach sequences.</li>
+<li>Conducted Microsoft Teams screenings, evaluated candidates, handled interview pipelines, rate negotiations, offer rollout, and placement follow-ups.</li>
+<li>Managed Beeline/VMS submissions, ATS tracking, compliance documentation, and periodic recruitment reports.</li>
+<li>Collaborated closely with BDMs, Delivery Managers, and Account Managers to meet fast-paced hiring targets.</li>
+</ul>
+</div>
 
-          <!-- Recruitment Expertise Cards -->
-          <h4 class="text-xs uppercase tracking-wider font-bold text-slate-400 mb-3">Recruitment expertise</h4>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-            <div class="p-3.5 bg-[#0e172a]/70 border border-[#1e293b] rounded-xl">
-              <div class="flex items-center gap-2 font-bold text-white text-sm mb-1">
-                <i data-lucide="users" class="w-4 h-4 text-sky-400"></i>
-                Talent Acquisition
-              </div>
-              <p class="text-xs text-slate-400">Full-cycle hiring, screening, sourcing</p>
-            </div>
-            <div class="p-3.5 bg-[#0e172a]/70 border border-[#1e293b] rounded-xl">
-              <div class="flex items-center gap-2 font-bold text-white text-sm mb-1">
-                <i data-lucide="handshake" class="w-4 h-4 text-sky-400"></i>
-                Client Partnerships
-              </div>
-              <p class="text-xs text-slate-400">Direct clients, prime vendors, BDMs</p>
-            </div>
-            <div class="p-3.5 bg-[#0e172a]/70 border border-[#1e293b] rounded-xl">
-              <div class="flex items-center gap-2 font-bold text-white text-sm mb-1">
-                <i data-lucide="sparkles" class="w-4 h-4 text-sky-400"></i>
-                AI-Powered Recruiting
-              </div>
-              <p class="text-xs text-slate-400">JD matching, outreach, workflow support</p>
-            </div>
-            <div class="p-3.5 bg-[#0e172a]/70 border border-[#1e293b] rounded-xl">
-              <div class="flex items-center gap-2 font-bold text-white text-sm mb-1">
-                <i data-lucide="shield-check" class="w-4 h-4 text-sky-400"></i>
-                Compliance & Quality
-              </div>
-              <p class="text-xs text-slate-400">Work authorization, ATS accuracy</p>
-            </div>
-          </div>
+<!-- 2. USM Business Systems -->
+<div class="card-glass rounded-2xl p-6 sm:p-8 shadow-xl">
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-1">
+<span class="text-xs uppercase tracking-wider font-bold text-slate-400">EXPERIENCE • MAY 2022 — MAR 2025</span>
+<span class="text-xs font-semibold text-slate-400">Hyderabad, India</span>
+</div>
+<h3 class="text-2xl font-bold text-white">USM Business Systems</h3>
+<p class="text-sky-400 font-semibold mb-2">Senior Technical Recruiter</p>
+<p class="text-xs text-slate-400 italic mb-4">USM Business Systems is a global digital transformation and IT staffing solutions provider serving government and commercial clients across North America.</p>
+<p class="text-sm sm:text-base text-slate-300 mb-6 leading-relaxed">
+Delivered Full Cycle / End to End Recruitment with a strong focus on high-volume candidate pipelining, SLA compliance, and AI-assisted sourcing workflows.
+</p>
 
-          <!-- Career Progression Badge -->
-          <div class="mb-6 p-4 bg-sky-950/20 border border-sky-800/40 rounded-xl flex items-start gap-3">
-            <i data-lucide="trending-up" class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"></i>
-            <div>
-              <p class="text-sm font-bold text-white">Career progression: US IT Recruiter → Senior Technical Recruiter</p>
-              <p class="text-xs text-slate-300 mt-0.5">Progressed through consistent recruitment delivery, sourcing expertise, and collaboration with clients and internal stakeholders.</p>
-            </div>
-          </div>
+<!-- Floating Typing Metric Counters: USM -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-5 border-y border-[#17223b] mb-6 bg-[#060a14]/60 rounded-xl px-4">
+<div class="text-center sm:text-left metric-float">
+<div class="text-3xl font-black text-indigo-400 tracking-tight flex items-center justify-center sm:justify-start">
+<span class="typing-text" data-text="1,200+"></span>
+</div>
+<div class="text-xs text-slate-400 mt-1">Candidate submissions</div>
+</div>
+<div class="text-center sm:text-left metric-float" style="animation-delay: 0.5s;">
+<div class="text-3xl font-black text-sky-400 tracking-tight flex items-center justify-center sm:justify-start">
+<span class="typing-text" data-text="250+"></span>
+</div>
+<div class="text-xs text-slate-400 mt-1">Interviews coordinated</div>
+</div>
+<div class="text-center sm:text-left metric-float" style="animation-delay: 1s;">
+<div class="text-3xl font-black text-purple-400 tracking-tight flex items-center justify-center sm:justify-start">
+<span class="typing-text" data-text="17"></span>
+</div>
+<div class="text-xs text-slate-400 mt-1">Candidate confirmations</div>
+</div>
+<div class="text-center sm:text-left metric-float" style="animation-delay: 1.5s;">
+<div class="text-3xl font-black text-emerald-400 tracking-tight flex items-center justify-center sm:justify-start">
+<span class="typing-text" data-text="13"></span>
+</div>
+<div class="text-xs text-slate-400 mt-1">Candidate starts</div>
+</div>
+</div>
 
-          <!-- Responsibilities & Key Contributions -->
-          <h4 class="text-xs uppercase tracking-wider font-bold text-slate-400 mb-3">Responsibilities & Key Contributions</h4>
-          <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside leading-relaxed">
-            <li>Managed end-to-end recruitment (source to offer) for U.S. IT contract, contract-to-hire, and full-time positions across W2, C2C, and 1099 models.</li>
-            <li>Progressed from US IT Recruiter to Senior Technical Recruiter through consistent performance and quality delivery.</li>
-            <li>Sourced and screened candidates using LinkedIn Recruiter, Dice, Monster, ATS databases, Boolean search, and X-Ray search.</li>
-            <li>Supported direct client accounts, including The College Board, Northwell Health, Shell, GE HealthCare, and State/Federal projects, alongside prime vendors and implementation partners.</li>
-            <li>Coordinated candidate screening, work authorization verification, rate negotiation, resume submissions, interview preparation, offer coordination, and placement follow-ups.</li>
-            <li>Earned positive client feedback and ratings, contributing to improved recruiter rankings through consistent delivery and candidate quality.</li>
-            <li>Leveraged OpenAI/ChatGPT for job-description analysis, resume matching, candidate outreach, and recruitment workflow optimization.</li>
-            <li>Maintained ATS records, talent pipelines, submission trackers, and interview updates while ensuring recruitment documentation and compliance.</li>
-            <li>Mentored junior recruiters on sourcing strategies, candidate evaluation, submission quality, and recruitment best practices.</li>
-          </ul>
-        </div>
+<!-- Career Progression Badge -->
+<div class="mb-6 p-4 bg-sky-950/30 border border-sky-800/40 rounded-xl flex items-start gap-3">
+<i data-lucide="trending-up" class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"></i>
+<div>
+<p class="text-sm font-bold text-white">Career progression: US IT Recruiter → Senior Technical Recruiter</p>
+<p class="text-xs text-slate-300 mt-0.5">Promoted through consistent recruitment delivery, sourcing expertise, and client delivery satisfaction.</p>
+</div>
+</div>
 
-        <!-- 3. Wipro Limited -->
-        <div class="bg-[#0a0f1d] border border-[#17223b] rounded-2xl p-6 sm:p-8 shadow-xl">
-          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-1">
-            <span class="text-xs uppercase tracking-wider font-bold text-slate-400">NOVEMBER 2021 – MAY 2022</span>
-            <span class="text-xs font-semibold text-slate-400">Gachibowli, Hyderabad (Remote)</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white">Wipro Limited</h3>
-          <p class="text-sky-400 font-semibold mb-2">Associate</p>
-          <p class="text-xs text-slate-400 italic mb-4">Wipro Limited is a multinational enterprise IT consulting and digital solutions organization delivering global technology and business operations services.</p>
+<!-- Responsibilities & Key Contributions -->
+<h4 class="text-xs uppercase tracking-wider font-bold text-slate-400 mb-3">Responsibilities & Key Contributions</h4>
+<ul class="space-y-2 text-sm text-slate-300 list-disc list-inside leading-relaxed">
+<li>Managed Full Cycle / End to End Recruitment (source to offer) for U.S. IT contract, contract-to-hire, and full-time positions across W2, C2C, and 1099 models.</li>
+<li>Sourced and screened candidates using LinkedIn Recruiter, Dice, Monster, CareerBuilder, ATS databases, Boolean search, and X-Ray search.</li>
+<li>Supported direct accounts including The College Board, Northwell Health, Shell, GE HealthCare, and State/Federal projects.</li>
+<li>Managed work authorization verification (USC, GC, H-1B, TN, CPT/OPT), rate negotiation, submission tracking, and interview preparation.</li>
+<li>Mentored junior recruiters on sourcing techniques, pipeline acceleration, and submission quality standards.</li>
+</ul>
+</div>
 
-          <h4 class="text-xs uppercase tracking-wider font-bold text-slate-400 mb-3">Key Responsibilities</h4>
-          <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside leading-relaxed">
-            <li>Edited road networks, lane geometry, and intersections using the ATLAS tool.</li>
-            <li>Aligned vector data with satellite imagery and corrected road connectivity and alignment issues.</li>
-            <li>Validated points of interest (POIs), business information, categories, locations, and relationship mappings.</li>
-            <li>Managed POI creation, data validation, duplicate resolution, and ticket management.</li>
-            <li>Resolved audit flags while meeting daily productivity and data quality targets.</li>
-            <li>Supported and mentored new associates on project workflows, quality standards, and compliance procedures.</li>
-          </ul>
-        </div>
+<!-- 3. Wipro Limited -->
+<div class="card-glass rounded-2xl p-6 sm:p-8 shadow-xl">
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-1">
+<span class="text-xs uppercase tracking-wider font-bold text-slate-400">NOVEMBER 2021 – MAY 2022</span>
+<span class="text-xs font-semibold text-slate-400">Hyderabad (Remote)</span>
+</div>
+<h3 class="text-2xl font-bold text-white">Wipro Limited</h3>
+<p class="text-sky-400 font-semibold mb-2">Associate</p>
+<p class="text-xs text-slate-400 italic mb-4">Wipro Limited is a multinational enterprise IT consulting and digital solutions organization delivering global technology and business operations services.</p>
 
-        <!-- 4. Enlistment Staffing -->
-        <div class="bg-[#0a0f1d] border border-[#17223b] rounded-2xl p-6 sm:p-8 shadow-xl">
-          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-1">
-            <span class="text-xs uppercase tracking-wider font-bold text-slate-400">AUGUST 2020 – NOVEMBER 2021</span>
-            <span class="text-xs font-semibold text-slate-400">Remote</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white">Enlistment Staffing</h3>
-          <p class="text-sky-400 font-semibold mb-2">Recruiter</p>
-          <p class="text-xs text-slate-400 italic mb-4">Enlistment Staffing is a specialized U.S. recruitment and workforce solutions provider covering IT, Engineering, and Accounting & Finance domains.</p>
+<h4 class="text-xs uppercase tracking-wider font-bold text-slate-400 mb-3">Key Responsibilities</h4>
+<ul class="space-y-2 text-sm text-slate-300 list-disc list-inside leading-relaxed">
+<li>Edited road networks, lane geometry, and intersections using the ATLAS tool.</li>
+<li>Aligned vector data with satellite imagery and corrected road connectivity and alignment issues.</li>
+<li>Validated points of interest (POIs), business information, categories, and relationship mappings.</li>
+<li>Managed POI creation, data validation, duplicate resolution, and ticket resolution within SLA.</li>
+<li>Mentored incoming associates on data quality workflows and audit standards.</li>
+</ul>
+</div>
 
-          <h4 class="text-xs uppercase tracking-wider font-bold text-slate-400 mb-3">Key Responsibilities</h4>
-          <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside leading-relaxed">
-            <li>Analyzed job descriptions and hiring requirements for IT and non-IT positions across direct-hire and permanent recruitment models.</li>
-            <li>Sourced, screened, and qualified candidates using LinkedIn, Indeed, Dice, and other recruitment channels.</li>
-            <li>Evaluated candidates based on technical skills, communication, availability, work authorization, and compensation expectations.</li>
-            <li>Coordinated interviews, maintained candidate engagement, and facilitated communication between candidates and hiring teams.</li>
-            <li>Collaborated with account managers to support client hiring requirements and achieve recruitment targets.</li>
-            <li>Developed practical knowledge of U.S. staffing processes, work authorization categories, and employment arrangements, including W2, C2C, and 1099.</li>
-          </ul>
-        </div>
+<!-- 4. Enlistment Staffing -->
+<div class="card-glass rounded-2xl p-6 sm:p-8 shadow-xl">
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-1">
+<span class="text-xs uppercase tracking-wider font-bold text-slate-400">AUGUST 2020 – NOVEMBER 2021</span>
+<span class="text-xs font-semibold text-slate-400">Hyderabad (Remote)</span>
+</div>
+<h3 class="text-2xl font-bold text-white">Enlistment Staffing</h3>
+<p class="text-sky-400 font-semibold mb-2">Recruiter</p>
+<p class="text-xs text-slate-400 italic mb-4">Enlistment Staffing is a specialized U.S. recruitment and workforce solutions provider covering IT, Engineering, and Accounting & Finance domains.</p>
 
-      </div>
-    </div>
-  </section>
+<h4 class="text-xs uppercase tracking-wider font-bold text-slate-400 mb-3">Key Responsibilities</h4>
+<ul class="space-y-2 text-sm text-slate-300 list-disc list-inside leading-relaxed">
+<li>Analyzed job descriptions and hiring requirements for IT and technical roles across direct-hire and permanent recruitment models.</li>
+<li>Sourced, screened, and qualified candidates using LinkedIn, Indeed, Dice, and vendor networks.</li>
+<li>Evaluated candidates on technical skills, communication, availability, compensation, and work authorization (W2, C2C, 1099).</li>
+<li>Coordinated interviews, maintained active candidate engagement, and facilitated feedback with hiring managers.</li>
+</ul>
+</div>
 
-  <!-- Recruitment Expertise & Ecosystem -->
-  <section id="expertise" class="py-16 md:py-20 border-b border-[#17223b] bg-[#030712]">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="flex items-center gap-3 mb-8">
-        <i data-lucide="layers" class="w-6 h-6 text-sky-400"></i>
-        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Recruitment Expertise & Ecosystem</h2>
-      </div>
+</div>
+</div>
+</section>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <!-- 1. Talent Acquisition Card -->
-        <div class="bg-[#0a0f1d] border border-[#17223b] rounded-2xl p-6 shadow-sm flex flex-col justify-between">
-          <div>
-            <div class="flex items-center gap-2 text-sm font-bold text-white mb-4">
-              <i data-lucide="user" class="w-4 h-4 text-sky-400"></i>
-              Talent Acquisition
-            </div>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">End-to-End Recruitment</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Technical Recruiting</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Corporate Hiring</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Leadership Hiring</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Candidate Screening</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Talent Mapping</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Candidate Engagement</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Offer Management</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Interview Coordination</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Work Auth Verification</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Rate Negotiation</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Stakeholder Management</span>
-            </div>
-          </div>
-        </div>
+<!-- Recruitment Expertise & Ecosystem -->
+<section id="expertise" class="py-16 md:py-20 border-b border-[#17223b]/60">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-3 mb-8">
+<i data-lucide="layers" class="w-6 h-6 text-sky-400"></i>
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Recruitment Expertise & Ecosystem</h2>
+</div>
 
-        <!-- 2. Staffing Models Card -->
-        <div class="bg-[#0a0f1d] border border-[#17223b] rounded-2xl p-6 shadow-sm flex flex-col justify-between">
-          <div>
-            <div class="flex items-center gap-2 text-sm font-bold text-white mb-4">
-              <i data-lucide="file-text" class="w-4 h-4 text-sky-400"></i>
-              Staffing Models
-            </div>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Contract Staffing</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Contract-to-Hire (C2H)</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Full-Time Hiring</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">W2 Recruitment</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">C2C (Corp-to-Corp)</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">1099 Recruitment</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">MSP / VMS Delivery</span>
-            </div>
-          </div>
-        </div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- 1. Talent Acquisition Card -->
+<div class="card-glass rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 text-sm font-bold text-white mb-4">
+<i data-lucide="user" class="w-4 h-4 text-sky-400"></i>
+Talent Acquisition
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Full Cycle / End to End Recruitment</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Technical Recruiting</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Corporate Hiring</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Leadership Hiring</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Candidate Screening</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Talent Mapping</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Candidate Engagement</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Offer Management</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Interview Coordination</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Work Auth Verification</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Rate Negotiation</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Stakeholder Management</span>
+</div>
+</div>
+</div>
 
-        <!-- 3. Sourcing & Intelligence Card -->
-        <div class="bg-[#0a0f1d] border border-[#17223b] rounded-2xl p-6 shadow-sm flex flex-col justify-between">
-          <div>
-            <div class="flex items-center gap-2 text-sm font-bold text-white mb-4">
-              <i data-lucide="search" class="w-4 h-4 text-sky-400"></i>
-              Sourcing & Intelligence
-            </div>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">LinkedIn Recruiter</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Advanced Boolean</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Google X-Ray</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Passive Sourcing</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Talent Pipelines</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Market Intelligence</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Deep Web Sourcing</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Referral Networks</span>
-            </div>
-          </div>
-        </div>
+<!-- 2. Staffing Models Card -->
+<div class="card-glass rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 text-sm font-bold text-white mb-4">
+<i data-lucide="file-text" class="w-4 h-4 text-sky-400"></i>
+Staffing Models
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Contract Staffing</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Contract-to-Hire (C2H)</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Full-Time Hiring</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">W2 Recruitment</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">C2C (Corp-to-Corp)</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">1099 Recruitment</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">MSP / VMS Delivery</span>
+</div>
+</div>
+</div>
 
-        <!-- 4. Platforms & Systems Card -->
-        <div class="bg-[#0a0f1d] border border-[#17223b] rounded-2xl p-6 shadow-sm">
-          <div class="flex items-center gap-2 text-sm font-bold text-white mb-3">
-            <i data-lucide="cpu" class="w-4 h-4 text-sky-400"></i>
-            Platforms & Systems
-          </div>
-          <div class="space-y-3">
-            <div>
-              <p class="text-xs font-semibold text-slate-300 mb-2">ATS / VMS:</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">CEIPAL</span>
-                <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Amoeba</span>
-                <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Beeline</span>
-                <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">SAP Fieldglass</span>
-              </div>
-            </div>
-            <div>
-              <p class="text-xs font-semibold text-slate-300 mb-2">Sourcing Portals:</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Dice</span>
-                <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Monster</span>
-                <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Indeed</span>
-                <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Prohires</span>
-                <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">SignalHire</span>
-                <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">iMocha</span>
-                <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">LinkedIn</span>
-                <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Naukri</span>
-                <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Naukrigulf Knowledge</span>
-              </div>
-            </div>
-          </div>
-        </div>
+<!-- 3. Sourcing & Intelligence Card -->
+<div class="card-glass rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 text-sm font-bold text-white mb-4">
+<i data-lucide="search" class="w-4 h-4 text-sky-400"></i>
+Sourcing & Intelligence
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">LinkedIn Recruiter</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Advanced Boolean</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Google X-Ray</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Passive Sourcing</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Talent Pipelines</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Market Intelligence</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Deep Web Sourcing</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Referral Networks</span>
+</div>
+</div>
+</div>
 
-        <!-- 5. AI-Powered Recruiting Workflows Card (2-Column Span) -->
-        <div class="bg-[#0a0f1d] border border-[#17223b] rounded-2xl p-6 md:col-span-2 shadow-sm">
-          <div class="flex items-center gap-2 text-sm font-bold text-white mb-4">
-            <i data-lucide="sparkles" class="w-4 h-4 text-sky-400"></i>
-            AI-Powered Recruiting Workflows
-          </div>
-          <div class="flex flex-wrap gap-2.5">
-            <span class="px-3 py-1.5 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-lg">Microsoft Copilot</span>
-            <span class="px-3 py-1.5 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-lg">ChatGPT & Google Gemini</span>
-            <span class="px-3 py-1.5 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-lg">Custom AI Agents</span>
-            <span class="px-3 py-1.5 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-lg">Prompt Engineering</span>
-            <span class="px-3 py-1.5 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-lg">JD Semantic Analysis</span>
-            <span class="px-3 py-1.5 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-lg">Resume Parsing</span>
-            <span class="px-3 py-1.5 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-lg">Candidate Matching</span>
-            <span class="px-3 py-1.5 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-lg">Outreach Sequences</span>
-            <span class="px-3 py-1.5 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-lg">Recruiting Automation</span>
-          </div>
-        </div>
+<!-- 4. Platforms & Systems Card -->
+<div class="card-glass rounded-2xl p-6 shadow-sm">
+<div class="flex items-center gap-2 text-sm font-bold text-white mb-3">
+<i data-lucide="cpu" class="w-4 h-4 text-sky-400"></i>
+Platforms & Systems
+</div>
+<div class="space-y-3">
+<div>
+<p class="text-xs font-semibold text-slate-300 mb-2">ATS / VMS:</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">CEIPAL</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Amoeba</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Beeline</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">SAP Fieldglass</span>
+</div>
+</div>
+<div>
+<p class="text-xs font-semibold text-slate-300 mb-2">Sourcing Portals:</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Dice</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Monster</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">CareerBuilder</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Indeed</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Prohires</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">SignalHire</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">iMocha</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">LinkedIn</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Naukri.com</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Naukrigulf</span>
+</div>
+</div>
+</div>
+</div>
 
-      </div>
-    </div>
-  </section>
+<!-- 5. AI-Powered Recruiting Workflows Card (2-Column Span) -->
+<div class="card-glass rounded-2xl p-6 md:col-span-2 shadow-sm">
+<div class="flex items-center gap-2 text-sm font-bold text-white mb-4">
+<i data-lucide="sparkles" class="w-4 h-4 text-sky-400"></i>
+AI-Powered Recruiting Workflows
+</div>
+<div class="flex flex-wrap gap-2.5">
+<span class="px-3 py-1.5 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-lg">Microsoft Copilot</span>
+<span class="px-3 py-1.5 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-lg">ChatGPT & Google Gemini</span>
+<span class="px-3 py-1.5 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-lg">Custom AI Agents</span>
+<span class="px-3 py-1.5 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-lg">Prompt Engineering</span>
+<span class="px-3 py-1.5 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-lg">JD Semantic Analysis</span>
+<span class="px-3 py-1.5 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-lg">Resume Parsing</span>
+<span class="px-3 py-1.5 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-lg">Candidate Matching</span>
+<span class="px-3 py-1.5 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-lg">Outreach Sequences</span>
+<span class="px-3 py-1.5 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-lg">Recruiting Automation</span>
+</div>
+</div>
 
-  <!-- Technologies & Positions Recruited (3-Column x 3-Row Interactive In-Page Grid) -->
-  <section id="technologies" class="py-16 md:py-20 border-b border-[#17223b]">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center gap-3 mb-4">
-        <i data-lucide="terminal" class="w-6 h-6 text-sky-400"></i>
-        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Technologies & Positions Recruited</h2>
-      </div>
-      <p class="text-slate-400 text-sm mb-10 max-w-3xl">Click on any role card to view the specific technologies, frameworks, and skill sets sourced directly below it.</p>
+</div>
+</div>
+</section>
 
-      <!-- 3 Row x 3 Column In-Page Clickable Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+<!-- Technologies & Positions Recruited (Interactive Accordions) -->
+<section id="technologies" class="py-16 md:py-20 border-b border-[#17223b]/60">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-3 mb-4">
+<i data-lucide="terminal" class="w-6 h-6 text-sky-400"></i>
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Technologies & Positions Recruited</h2>
+</div>
+<p class="text-slate-400 text-sm mb-10 max-w-3xl">Click on any role card to view the specific technologies, frameworks, and skill sets sourced directly below it.</p>
 
-        <!-- 1. Software Engineering -->
-        <div class="bg-[#0a0f1d] border border-[#17223b] rounded-2xl overflow-hidden shadow-sm transition hover:border-sky-500/50">
-          <button onclick="toggleCard('pos-1', 'arrow-1')" class="w-full p-5 text-left flex items-center justify-between group">
-            <span class="text-sm font-bold text-white flex items-center gap-2.5">
-              <i data-lucide="code-2" class="w-4 h-4 text-sky-400"></i>
-              Software Engineering
-            </span>
-            <i id="arrow-1" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-hover:text-sky-400 transition-transform duration-200"></i>
-          </button>
-          <div id="pos-1" class="hidden p-5 pt-0 border-t border-[#17223b]/60 bg-[#060a14]/60">
-            <p class="text-[11px] text-slate-400 my-2.5 font-semibold uppercase tracking-wider">Technologies & Roles:</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Java</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Spring Boot</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Microservices</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">.NET</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Python</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">React</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Angular</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Node.js</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Full Stack Developer</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Software Engineers</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Mobile (iOS/Android)</span>
-            </div>
-          </div>
-        </div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
 
-        <!-- 2. Cloud & Infrastructure -->
-        <div class="bg-[#0a0f1d] border border-[#17223b] rounded-2xl overflow-hidden shadow-sm transition hover:border-sky-500/50">
-          <button onclick="toggleCard('pos-2', 'arrow-2')" class="w-full p-5 text-left flex items-center justify-between group">
-            <span class="text-sm font-bold text-white flex items-center gap-2.5">
-              <i data-lucide="cloud" class="w-4 h-4 text-sky-400"></i>
-              Cloud & Infrastructure
-            </span>
-            <i id="arrow-2" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-hover:text-sky-400 transition-transform duration-200"></i>
-          </button>
-          <div id="pos-2" class="hidden p-5 pt-0 border-t border-[#17223b]/60 bg-[#060a14]/60">
-            <p class="text-[11px] text-slate-400 my-2.5 font-semibold uppercase tracking-wider">Technologies & Roles:</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">AWS</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Azure</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">DevOps</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Kubernetes</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Terraform</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Cloud Engineers</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Network Architects</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">System Admins</span>
-              <span class="px-2.5 py-1 text-xs text-slate-200 rounded-md bg-[#0e172a] border border-[#1e293b]">Data Center Tech</span>
-              <span class="px-2.5 py-1 text-xs text-slate-200 rounded-md bg-[#0e172a] border border-[#1e293b]">Desktop Support</span>
-            </div>
-          </div>
-        </div>
+<!-- 1. Software Engineering -->
+<div class="card-glass rounded-2xl overflow-hidden shadow-sm transition">
+<button onclick="toggleCard('pos-1', 'arrow-1')" class="w-full p-5 text-left flex items-center justify-between group">
+<span class="text-sm font-bold text-white flex items-center gap-2.5">
+<i data-lucide="code-2" class="w-4 h-4 text-sky-400"></i>
+Software Engineering
+</span>
+<i id="arrow-1" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-hover:text-sky-400 transition-transform duration-200"></i>
+</button>
+<div id="pos-1" class="hidden p-5 pt-0 border-t border-[#17223b]/60 bg-[#060a14]/60">
+<p class="text-[11px] text-slate-400 my-2.5 font-semibold uppercase tracking-wider">Technologies & Roles:</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Java</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Spring Boot</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Microservices</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">.NET</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Python</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">React</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Angular</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Node.js</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Full Stack Developer</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Software Engineers</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Mobile (iOS/Android)</span>
+</div>
+</div>
+</div>
 
-        <!-- 3. AI, Data & Database Administration -->
-        <div class="bg-[#0a0f1d] border border-[#17223b] rounded-2xl overflow-hidden shadow-sm transition hover:border-sky-500/50">
-          <button onclick="toggleCard('pos-3', 'arrow-3')" class="w-full p-5 text-left flex items-center justify-between group">
-            <span class="text-sm font-bold text-white flex items-center gap-2.5">
-              <i data-lucide="database" class="w-4 h-4 text-sky-400"></i>
-              AI, Data & Databases
-            </span>
-            <i id="arrow-3" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-hover:text-sky-400 transition-transform duration-200"></i>
-          </button>
-          <div id="pos-3" class="hidden p-5 pt-0 border-t border-[#17223b]/60 bg-[#060a14]/60">
-            <p class="text-[11px] text-slate-400 my-2.5 font-semibold uppercase tracking-wider">Technologies & Roles:</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">AI Engineers</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">AI/ML Engineers</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Machine Learning</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Data Engineers</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Data Analysts</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Data Scientists</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Tableau Admin</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Power BI Developer</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Greenplum Admin</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Kafka Admin</span>
-            </div>
-          </div>
-        </div>
+<!-- 2. Cloud & Infrastructure -->
+<div class="card-glass rounded-2xl overflow-hidden shadow-sm transition">
+<button onclick="toggleCard('pos-2', 'arrow-2')" class="w-full p-5 text-left flex items-center justify-between group">
+<span class="text-sm font-bold text-white flex items-center gap-2.5">
+<i data-lucide="cloud" class="w-4 h-4 text-sky-400"></i>
+Cloud & Infrastructure
+</span>
+<i id="arrow-2" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-hover:text-sky-400 transition-transform duration-200"></i>
+</button>
+<div id="pos-2" class="hidden p-5 pt-0 border-t border-[#17223b]/60 bg-[#060a14]/60">
+<p class="text-[11px] text-slate-400 my-2.5 font-semibold uppercase tracking-wider">Technologies & Roles:</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">AWS</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Azure</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">DevOps</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Kubernetes</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Terraform</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Cloud Engineers</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Network Architects</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">System Admins</span>
+<span class="px-2.5 py-1 text-xs text-slate-200 rounded-md bg-[#0e172a] border border-[#1e293b]">Data Center Tech</span>
+<span class="px-2.5 py-1 text-xs text-slate-200 rounded-md bg-[#0e172a] border border-[#1e293b]">Desktop Support</span>
+</div>
+</div>
+</div>
 
-        <!-- 4. ERP & Enterprise Applications -->
-        <div class="bg-[#0a0f1d] border border-[#17223b] rounded-2xl overflow-hidden shadow-sm transition hover:border-sky-500/50">
-          <button onclick="toggleCard('pos-4', 'arrow-4')" class="w-full p-5 text-left flex items-center justify-between group">
-            <span class="text-sm font-bold text-white flex items-center gap-2.5">
-              <i data-lucide="layout-grid" class="w-4 h-4 text-sky-400"></i>
-              ERP & Enterprise Apps
-            </span>
-            <i id="arrow-4" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-hover:text-sky-400 transition-transform duration-200"></i>
-          </button>
-          <div id="pos-4" class="hidden p-5 pt-0 border-t border-[#17223b]/60 bg-[#060a14]/60">
-            <p class="text-[11px] text-slate-400 my-2.5 font-semibold uppercase tracking-wider">Technologies & Roles:</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">SAP</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Microsoft Dynamics 365</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Salesforce Developers</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Salesforce Architects</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">ServiceNow Developers</span>
-            </div>
-          </div>
-        </div>
+<!-- 3. AI, Data & Database Administration -->
+<div class="card-glass rounded-2xl overflow-hidden shadow-sm transition">
+<button onclick="toggleCard('pos-3', 'arrow-3')" class="w-full p-5 text-left flex items-center justify-between group">
+<span class="text-sm font-bold text-white flex items-center gap-2.5">
+<i data-lucide="database" class="w-4 h-4 text-sky-400"></i>
+AI, Data & Databases
+</span>
+<i id="arrow-3" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-hover:text-sky-400 transition-transform duration-200"></i>
+</button>
+<div id="pos-3" class="hidden p-5 pt-0 border-t border-[#17223b]/60 bg-[#060a14]/60">
+<p class="text-[11px] text-slate-400 my-2.5 font-semibold uppercase tracking-wider">Technologies & Roles:</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">AI Engineers</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">AI/ML Engineers</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Machine Learning</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Data Engineers</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Data Analysts</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Data Scientists</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Tableau Admin</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Power BI Developer</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Greenplum Admin</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Kafka Admin</span>
+</div>
+</div>
+</div>
 
-        <!-- 5. Business, Energy & Functional -->
-        <div class="bg-[#0a0f1d] border border-[#17223b] rounded-2xl overflow-hidden shadow-sm transition hover:border-sky-500/50">
-          <button onclick="toggleCard('pos-5', 'arrow-5')" class="w-full p-5 text-left flex items-center justify-between group">
-            <span class="text-sm font-bold text-white flex items-center gap-2.5">
-              <i data-lucide="briefcase" class="w-4 h-4 text-sky-400"></i>
-              Business & Functional
-            </span>
-            <i id="arrow-5" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-hover:text-sky-400 transition-transform duration-200"></i>
-          </button>
-          <div id="pos-5" class="hidden p-5 pt-0 border-t border-[#17223b]/60 bg-[#060a14]/60">
-            <p class="text-[11px] text-slate-400 my-2.5 font-semibold uppercase tracking-wider">Technologies & Roles:</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Business Analysts</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Systems Analysts</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Application Analysts</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Clinical Analysts</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">ETRM Analyst</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Accountant</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Asset Management</span>
-            </div>
-          </div>
-        </div>
+<!-- 4. ERP & Enterprise Applications -->
+<div class="card-glass rounded-2xl overflow-hidden shadow-sm transition">
+<button onclick="toggleCard('pos-4', 'arrow-4')" class="w-full p-5 text-left flex items-center justify-between group">
+<span class="text-sm font-bold text-white flex items-center gap-2.5">
+<i data-lucide="layout-grid" class="w-4 h-4 text-sky-400"></i>
+ERP & Enterprise Apps
+</span>
+<i id="arrow-4" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-hover:text-sky-400 transition-transform duration-200"></i>
+</button>
+<div id="pos-4" class="hidden p-5 pt-0 border-t border-[#17223b]/60 bg-[#060a14]/60">
+<p class="text-[11px] text-slate-400 my-2.5 font-semibold uppercase tracking-wider">Technologies & Roles:</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">SAP</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Microsoft Dynamics 365</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Salesforce Developers</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Salesforce Architects</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">ServiceNow Developers</span>
+</div>
+</div>
+</div>
 
-        <!-- 6. Quality Engineering -->
-        <div class="bg-[#0a0f1d] border border-[#17223b] rounded-2xl overflow-hidden shadow-sm transition hover:border-sky-500/50">
-          <button onclick="toggleCard('pos-6', 'arrow-6')" class="w-full p-5 text-left flex items-center justify-between group">
-            <span class="text-sm font-bold text-white flex items-center gap-2.5">
-              <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400"></i>
-              Quality Engineering
-            </span>
-            <i id="arrow-6" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-hover:text-sky-400 transition-transform duration-200"></i>
-          </button>
-          <div id="pos-6" class="hidden p-5 pt-0 border-t border-[#17223b]/60 bg-[#060a14]/60">
-            <p class="text-[11px] text-slate-400 my-2.5 font-semibold uppercase tracking-wider">Technologies & Roles:</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">QA Automation</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">SDETs</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Performance Testing</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Test Automation Lead</span>
-            </div>
-          </div>
-        </div>
+<!-- 5. Business & Functional -->
+<div class="card-glass rounded-2xl overflow-hidden shadow-sm transition">
+<button onclick="toggleCard('pos-5', 'arrow-5')" class="w-full p-5 text-left flex items-center justify-between group">
+<span class="text-sm font-bold text-white flex items-center gap-2.5">
+<i data-lucide="briefcase" class="w-4 h-4 text-sky-400"></i>
+Business & Functional
+</span>
+<i id="arrow-4" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-hover:text-sky-400 transition-transform duration-200"></i>
+</button>
+<div id="pos-5" class="hidden p-5 pt-0 border-t border-[#17223b]/60 bg-[#060a14]/60">
+<p class="text-[11px] text-slate-400 my-2.5 font-semibold uppercase tracking-wider">Technologies & Roles:</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Business Analysts</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Systems Analysts</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Application Analysts</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Clinical Analysts</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">ETRM Analyst</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Accountant</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Asset Management</span>
+</div>
+</div>
+</div>
 
-        <!-- 7. Leadership & Operations -->
-        <div class="bg-[#0a0f1d] border border-[#17223b] rounded-2xl overflow-hidden shadow-sm transition hover:border-sky-500/50">
-          <button onclick="toggleCard('pos-7', 'arrow-7')" class="w-full p-5 text-left flex items-center justify-between group">
-            <span class="text-sm font-bold text-white flex items-center gap-2.5">
-              <i data-lucide="crown" class="w-4 h-4 text-sky-400"></i>
-              Leadership & Operations
-            </span>
-            <i id="arrow-7" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-hover:text-sky-400 transition-transform duration-200"></i>
-          </button>
-          <div id="pos-7" class="hidden p-5 pt-0 border-t border-[#17223b]/60 bg-[#060a14]/60">
-            <p class="text-[11px] text-slate-400 my-2.5 font-semibold uppercase tracking-wider">Technologies & Roles:</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Technical Project Mgrs</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Program Managers</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Scrum Masters</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Agile Coach</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Product Owners</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Solutions Architects</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Engineering Managers</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Director</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Operation Manager</span>
-            </div>
-          </div>
-        </div>
+<!-- 6. Quality Engineering -->
+<div class="card-glass rounded-2xl overflow-hidden shadow-sm transition">
+<button onclick="toggleCard('pos-6', 'arrow-6')" class="w-full p-5 text-left flex items-center justify-between group">
+<span class="text-sm font-bold text-white flex items-center gap-2.5">
+<i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400"></i>
+Quality Engineering
+</span>
+<i id="arrow-6" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-hover:text-sky-400 transition-transform duration-200"></i>
+</button>
+<div id="pos-6" class="hidden p-5 pt-0 border-t border-[#17223b]/60 bg-[#060a14]/60">
+<p class="text-[11px] text-slate-400 my-2.5 font-semibold uppercase tracking-wider">Technologies & Roles:</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">QA Automation</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">SDETs</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Performance Testing</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Test Automation Lead</span>
+</div>
+</div>
+</div>
 
-        <!-- 8. Education & Administrative Support -->
-        <div class="bg-[#0a0f1d] border border-[#17223b] rounded-2xl overflow-hidden shadow-sm transition hover:border-sky-500/50">
-          <button onclick="toggleCard('pos-8', 'arrow-8')" class="w-full p-5 text-left flex items-center justify-between group">
-            <span class="text-sm font-bold text-white flex items-center gap-2.5">
-              <i data-lucide="graduation-cap" class="w-4 h-4 text-sky-400"></i>
-              Education & Admin Support
-            </span>
-            <i id="arrow-8" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-hover:text-sky-400 transition-transform duration-200"></i>
-          </button>
-          <div id="pos-8" class="hidden p-5 pt-0 border-t border-[#17223b]/60 bg-[#060a14]/60">
-            <p class="text-[11px] text-slate-400 my-2.5 font-semibold uppercase tracking-wider">Technologies & Roles:</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Teacher</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Proctor</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Administrator</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Operations Coordinator</span>
-            </div>
-          </div>
-        </div>
+<!-- 7. Leadership & Operations -->
+<div class="card-glass rounded-2xl overflow-hidden shadow-sm transition">
+<button onclick="toggleCard('pos-7', 'arrow-7')" class="w-full p-5 text-left flex items-center justify-between group">
+<span class="text-sm font-bold text-white flex items-center gap-2.5">
+<i data-lucide="crown" class="w-4 h-4 text-sky-400"></i>
+Leadership & Operations
+</span>
+<i id="arrow-7" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-hover:text-sky-400 transition-transform duration-200"></i>
+</button>
+<div id="pos-7" class="hidden p-5 pt-0 border-t border-[#17223b]/60 bg-[#060a14]/60">
+<p class="text-[11px] text-slate-400 my-2.5 font-semibold uppercase tracking-wider">Technologies & Roles:</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Technical Project Mgrs</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Program Managers</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Scrum Masters</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Agile Coach</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Product Owners</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Solutions Architects</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Engineering Managers</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Director</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Operation Manager</span>
+</div>
+</div>
+</div>
 
-        <!-- 9. Contact Center & CX -->
-        <div class="bg-[#0a0f1d] border border-[#17223b] rounded-2xl overflow-hidden shadow-sm transition hover:border-sky-500/50">
-          <button onclick="toggleCard('pos-9', 'arrow-9')" class="w-full p-5 text-left flex items-center justify-between group">
-            <span class="text-sm font-bold text-white flex items-center gap-2.5">
-              <i data-lucide="headphones" class="w-4 h-4 text-sky-400"></i>
-              Contact Center & CX
-            </span>
-            <i id="arrow-9" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-hover:text-sky-400 transition-transform duration-200"></i>
-          </button>
-          <div id="pos-9" class="hidden p-5 pt-0 border-t border-[#17223b]/60 bg-[#060a14]/60">
-            <p class="text-[11px] text-slate-400 my-2.5 font-semibold uppercase tracking-wider">Technologies & Roles:</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Amazon Connect</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Conversational AI</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">CaaS</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Chatbot</span>
-              <span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">CX Solutions</span>
-            </div>
-          </div>
-        </div>
+<!-- 8. Education & Administrative Support -->
+<div class="card-glass rounded-2xl overflow-hidden shadow-sm transition">
+<button onclick="toggleCard('pos-8', 'arrow-8')" class="w-full p-5 text-left flex items-center justify-between group">
+<span class="text-sm font-bold text-white flex items-center gap-2.5">
+<i data-lucide="graduation-cap" class="w-4 h-4 text-sky-400"></i>
+Education & Admin Support
+</span>
+<i id="arrow-8" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-hover:text-sky-400 transition-transform duration-200"></i>
+</button>
+<div id="pos-8" class="hidden p-5 pt-0 border-t border-[#17223b]/60 bg-[#060a14]/60">
+<p class="text-[11px] text-slate-400 my-2.5 font-semibold uppercase tracking-wider">Technologies & Roles:</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Teacher</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Proctor</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Administrator</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Operations Coordinator</span>
+</div>
+</div>
+</div>
 
-      </div>
-    </div>
-  </section>
+<!-- 9. Contact Center & CX -->
+<div class="card-glass rounded-2xl overflow-hidden shadow-sm transition">
+<button onclick="toggleCard('pos-9', 'arrow-9')" class="w-full p-5 text-left flex items-center justify-between group">
+<span class="text-sm font-bold text-white flex items-center gap-2.5">
+<i data-lucide="headphones" class="w-4 h-4 text-sky-400"></i>
+Contact Center & CX
+</span>
+<i id="arrow-9" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-hover:text-sky-400 transition-transform duration-200"></i>
+</button>
+<div id="pos-9" class="hidden p-5 pt-0 border-t border-[#17223b]/60 bg-[#060a14]/60">
+<p class="text-[11px] text-slate-400 my-2.5 font-semibold uppercase tracking-wider">Technologies & Roles:</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Amazon Connect</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Conversational AI</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">CaaS</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">Chatbot</span>
+<span class="px-2.5 py-1 bg-[#0e172a] border border-[#1e293b] text-xs text-slate-200 rounded-md">CX Solutions</span>
+</div>
+</div>
+</div>
 
-  <!-- Certifications & Accreditations -->
-  <section id="certifications" class="py-16 md:py-20 border-b border-[#17223b] bg-[#030712]">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center gap-3 mb-10">
-        <i data-lucide="award" class="w-6 h-6 text-sky-400"></i>
-        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Certifications & Accreditations</h2>
-      </div>
+</div>
+</div>
+</section>
 
-      <!-- Featured Credentials -->
-      <h3 class="text-xs uppercase tracking-wider font-bold text-slate-400 mb-4">Featured Credentials</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
-        <a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer" 
-           class="flex items-center justify-between p-4 bg-[#0a0f1d] border border-[#17223b] rounded-xl hover:border-sky-500/70 transition group">
-          <span class="text-sm font-medium text-slate-200 group-hover:text-sky-400 transition">🏆 AI-Driven Recruiting – LinkedIn Recruiter Power User Assessment</span>
-          <i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-sky-400 transition shrink-0 ml-2"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer" 
-           class="flex items-center justify-between p-4 bg-[#0a0f1d] border border-[#17223b] rounded-xl hover:border-sky-500/70 transition group">
-          <span class="text-sm font-medium text-slate-200 group-hover:text-sky-400 transition">🏆 AI-Driven Excellence – LinkedIn Hiring Assistant Assessment</span>
-          <i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-sky-400 transition shrink-0 ml-2"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer" 
-           class="flex items-center justify-between p-4 bg-[#0a0f1d] border border-[#17223b] rounded-xl hover:border-sky-500/70 transition group">
-          <span class="text-sm font-medium text-slate-200 group-hover:text-sky-400 transition">🏆 Career Essentials in Generative AI – Microsoft & LinkedIn</span>
-          <i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-sky-400 transition shrink-0 ml-2"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer" 
-           class="flex items-center justify-between p-4 bg-[#0a0f1d] border border-[#17223b] rounded-xl hover:border-sky-500/70 transition group">
-          <span class="text-sm font-medium text-slate-200 group-hover:text-sky-400 transition">🏆 Advanced Tech Recruitment Certified Professional – DevSkiller</span>
-          <i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-sky-400 transition shrink-0 ml-2"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer" 
-           class="flex items-center justify-between p-4 bg-[#0a0f1d] border border-[#17223b] rounded-xl hover:border-sky-500/70 transition group">
-          <span class="text-sm font-medium text-slate-200 group-hover:text-sky-400 transition">🏆 LinkedIn Recruiter & AI-Driven Talent Acquisition Professional Certificate</span>
-          <i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-sky-400 transition shrink-0 ml-2"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer" 
-           class="flex items-center justify-between p-4 bg-[#0a0f1d] border border-[#17223b] rounded-xl hover:border-sky-500/70 transition group">
-          <span class="text-sm font-medium text-slate-200 group-hover:text-sky-400 transition">🏆 ASA Corporate Recruiting Professional Certificate – ASA</span>
-          <i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-sky-400 transition shrink-0 ml-2"></i>
-        </a>
-      </div>
+<!-- Certifications & Accreditations -->
+<section id="certifications" class="py-16 md:py-20 border-b border-[#17223b]/60">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-3 mb-10">
+<i data-lucide="award" class="w-6 h-6 text-sky-400"></i>
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Certifications & Accreditations</h2>
+</div>
 
-      <!-- Additional Accreditations -->
-      <h3 class="text-xs uppercase tracking-wider font-bold text-slate-400 mb-4">Additional Professional Accreditations</h3>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
-        <a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer" 
-           class="p-3 bg-[#0a0f1d] border border-[#17223b] rounded-lg hover:border-sky-500/70 transition group block">
-          <span class="text-xs font-medium text-slate-300 group-hover:text-sky-400 transition">Naukrigulf Advanced Certified Recruiter</span>
-        </a>
-        <a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer" 
-           class="p-3 bg-[#0a0f1d] border border-[#17223b] rounded-lg hover:border-sky-500/70 transition group block">
-          <span class="text-xs font-medium text-slate-300 group-hover:text-sky-400 transition">Tech Recruitment Certified Professional</span>
-        </a>
-        <a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer" 
-           class="p-3 bg-[#0a0f1d] border border-[#17223b] rounded-lg hover:border-sky-500/70 transition group block">
-          <span class="text-xs font-medium text-slate-300 group-hover:text-sky-400 transition">Naukri Maestro Recruiter</span>
-        </a>
-        <a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer" 
-           class="p-3 bg-[#0a0f1d] border border-[#17223b] rounded-lg hover:border-sky-500/70 transition group block">
-          <span class="text-xs font-medium text-slate-300 group-hover:text-sky-400 transition">Generative AI for Recruiting Certificate</span>
-        </a>
-        <a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer" 
-           class="p-3 bg-[#0a0f1d] border border-[#17223b] rounded-lg hover:border-sky-500/70 transition group block">
-          <span class="text-xs font-medium text-slate-300 group-hover:text-sky-400 transition">Skills-First Talent Acquisition</span>
-        </a>
-        <a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer" 
-           class="p-3 bg-[#0a0f1d] border border-[#17223b] rounded-lg hover:border-sky-500/70 transition group block">
-          <span class="text-xs font-medium text-slate-300 group-hover:text-sky-400 transition">Ethical AI for Hiring & Acquisition</span>
-        </a>
-        <a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer" 
-           class="p-3 bg-[#0a0f1d] border border-[#17223b] rounded-lg hover:border-sky-500/70 transition group block">
-          <span class="text-xs font-medium text-slate-300 group-hover:text-sky-400 transition">Hire for Critical Skills Assessment</span>
-        </a>
-        <a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer" 
-           class="p-3 bg-[#0a0f1d] border border-[#17223b] rounded-lg hover:border-sky-500/70 transition group block">
-          <span class="text-xs font-medium text-slate-300 group-hover:text-sky-400 transition">Technical Recruiting</span>
-        </a>
-      </div>
-    </div>
-  </section>
+<!-- Featured Credentials -->
+<h3 class="text-xs uppercase tracking-wider font-bold text-slate-400 mb-4">Featured Credentials</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
+<a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer"
+class="flex items-center justify-between p-4 card-glass rounded-xl hover:border-sky-500/70 transition group">
+<span class="text-sm font-medium text-slate-200 group-hover:text-sky-400 transition">🏆 AI-Driven Recruiting – LinkedIn Recruiter Power User Assessment</span>
+<i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-sky-400 transition shrink-0 ml-2"></i>
+</a>
+<a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer"
+class="flex items-center justify-between p-4 card-glass rounded-xl hover:border-sky-500/70 transition group">
+<span class="text-sm font-medium text-slate-200 group-hover:text-sky-400 transition">🏆 AI-Driven Excellence – LinkedIn Hiring Assistant Assessment</span>
+<i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-sky-400 transition shrink-0 ml-2"></i>
+</a>
+<a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer"
+class="flex items-center justify-between p-4 card-glass rounded-xl hover:border-sky-500/70 transition group">
+<span class="text-sm font-medium text-slate-200 group-hover:text-sky-400 transition">🏆 Career Essentials in Generative AI – Microsoft & LinkedIn</span>
+<i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-sky-400 transition shrink-0 ml-2"></i>
+</a>
+<a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer"
+class="flex items-center justify-between p-4 card-glass rounded-xl hover:border-sky-500/70 transition group">
+<span class="text-sm font-medium text-slate-200 group-hover:text-sky-400 transition">🏆 Advanced Tech Recruitment Certified Professional – DevSkiller</span>
+<i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-sky-400 transition shrink-0 ml-2"></i>
+</a>
+<a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer"
+class="flex items-center justify-between p-4 card-glass rounded-xl hover:border-sky-500/70 transition group">
+<span class="text-sm font-medium text-slate-200 group-hover:text-sky-400 transition">🏆 LinkedIn Recruiter & AI-Driven Talent Acquisition Professional Certificate</span>
+<i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-sky-400 transition shrink-0 ml-2"></i>
+</a>
+<a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer"
+class="flex items-center justify-between p-4 card-glass rounded-xl hover:border-sky-500/70 transition group">
+<span class="text-sm font-medium text-slate-200 group-hover:text-sky-400 transition">🏆 ASA Corporate Recruiting Professional Certificate – ASA</span>
+<i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-sky-400 transition shrink-0 ml-2"></i>
+</a>
+</div>
 
-  <!-- Education Section -->
-  <section class="py-12 border-b border-[#17223b]">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center gap-3 mb-4">
-        <i data-lucide="graduation-cap" class="w-6 h-6 text-sky-400"></i>
-        <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-white">Education</h2>
-      </div>
-      <div class="p-5 bg-[#0a0f1d] border border-[#17223b] rounded-xl">
-        <p class="text-base text-slate-200 font-semibold">Bachelors in Engineering (B.Tech) in Mechanical</p>
-        <p class="text-xs sm:text-sm text-slate-400 mt-1">Jawaharlal Nehru Technological University Hyderabad (JNTUH) — 2020</p>
-      </div>
-    </div>
-  </section>
+<!-- Additional Accreditations -->
+<h3 class="text-xs uppercase tracking-wider font-bold text-slate-400 mb-4">Additional Professional Accreditations</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+<a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer"
+class="p-3 card-glass rounded-lg hover:border-sky-500/70 transition group block">
+<span class="text-xs font-medium text-slate-300 group-hover:text-sky-400 transition">Naukrigulf Advanced Certified Recruiter</span>
+</a>
+<a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer"
+class="p-3 card-glass rounded-lg hover:border-sky-500/70 transition group block">
+<span class="text-xs font-medium text-slate-300 group-hover:text-sky-400 transition">Tech Recruitment Certified Professional</span>
+</a>
+<a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer"
+class="p-3 card-glass rounded-lg hover:border-sky-500/70 transition group block">
+<span class="text-xs font-medium text-slate-300 group-hover:text-sky-400 transition">Naukri Maestro Recruiter</span>
+</a>
+<a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer"
+class="p-3 card-glass rounded-lg hover:border-sky-500/70 transition group block">
+<span class="text-xs font-medium text-slate-300 group-hover:text-sky-400 transition">Generative AI for Recruiting Certificate</span>
+</a>
+<a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer"
+class="p-3 card-glass rounded-lg hover:border-sky-500/70 transition group block">
+<span class="text-xs font-medium text-slate-300 group-hover:text-sky-400 transition">Skills-First Talent Acquisition</span>
+</a>
+<a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer"
+class="p-3 card-glass rounded-lg hover:border-sky-500/70 transition group block">
+<span class="text-xs font-medium text-slate-300 group-hover:text-sky-400 transition">Ethical AI for Hiring & Acquisition</span>
+</a>
+<a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer"
+class="p-3 card-glass rounded-lg hover:border-sky-500/70 transition group block">
+<span class="text-xs font-medium text-slate-300 group-hover:text-sky-400 transition">Hire for Critical Skills Assessment</span>
+</a>
+<a href="https://www.linkedin.com/in/syed-nayeem/details/certifications/" target="_blank" rel="noopener noreferrer"
+class="p-3 card-glass rounded-lg hover:border-sky-500/70 transition group block">
+<span class="text-xs font-medium text-slate-300 group-hover:text-sky-400 transition">Technical Recruiting</span>
+</a>
+</div>
+</div>
+</section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-16 md:py-20 border-b border-[#17223b] bg-[#030712]">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <div class="inline-flex items-center justify-center p-3 rounded-full bg-[#0a0f1d] mb-4 border border-[#17223b]">
-        <i data-lucide="send" class="w-6 h-6 text-sky-400"></i>
-      </div>
-      <h2 class="text-3xl font-bold tracking-tight text-white mb-2">Let's Connect</h2>
-      <p class="text-slate-400 text-sm sm:text-base mb-2">📍 Location: Hyderabad, India</p>
-      <p class="text-slate-400 text-sm max-w-lg mx-auto mb-8">Reach out directly via email, phone, WhatsApp, or reserve time directly on my Google Calendar.</p>
+<!-- Education Section -->
+<section class="py-12 border-b border-[#17223b]/60">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-3 mb-4">
+<i data-lucide="graduation-cap" class="w-6 h-6 text-sky-400"></i>
+<h2 class="text-xl sm:text-2xl font-bold tracking-tight text-white">Education</h2>
+</div>
+<div class="p-5 card-glass rounded-xl">
+<p class="text-base text-slate-200 font-semibold">Bachelor of Technology (B.Tech) in Mechanical Engineering</p>
+<p class="text-xs sm:text-sm text-slate-400 mt-1">Jawaharlal Nehru Technological University Hyderabad (2020)</p>
+</div>
+</div>
+</section>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
-        <!-- Email -->
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=syednayeem.work@gmail.com" target="_blank" rel="noopener noreferrer"
-           class="p-4 bg-[#0a0f1d] border border-[#17223b] rounded-xl hover:border-sky-500/70 transition group flex flex-col items-center shadow-sm">
-          <i data-lucide="mail" class="w-6 h-6 text-sky-400 mb-2"></i>
-          <span class="text-sm font-semibold text-white group-hover:text-sky-400 transition">Email Me</span>
-          <span class="text-xs text-slate-400 mt-1">Let's Connect</span>
-        </a>
-        <!-- Call -->
-        <a href="tel:+916303892404"
-           class="p-4 bg-[#0a0f1d] border border-[#17223b] rounded-xl hover:border-sky-500/70 transition group flex flex-col items-center shadow-sm">
-          <i data-lucide="phone-call" class="w-6 h-6 text-amber-400 mb-2"></i>
-          <span class="text-sm font-semibold text-white group-hover:text-sky-400 transition">Direct Call</span>
-          <span class="text-xs text-slate-400 mt-1">+91 6303892404</span>
-        </a>
-        <!-- WhatsApp -->
-        <a href="https://wa.me/916303892404" target="_blank" rel="noopener noreferrer"
-           class="p-4 bg-[#0a0f1d] border border-[#17223b] rounded-xl hover:border-sky-500/70 transition group flex flex-col items-center shadow-sm">
-          <i data-lucide="message-circle" class="w-6 h-6 text-emerald-400 mb-2"></i>
-          <span class="text-sm font-semibold text-white group-hover:text-sky-400 transition">WhatsApp</span>
-          <span class="text-xs text-slate-400 mt-1">Chat Instantly</span>
-        </a>
-        <!-- Google Calendar -->
-        <a href="https://calendar.app.google/2A5CWPT3bHL5L34E7" target="_blank" rel="noopener noreferrer"
-           class="p-4 bg-[#0a0f1d] border border-[#17223b] rounded-xl hover:border-sky-500/70 transition group flex flex-col items-center shadow-sm">
-          <i data-lucide="calendar-check" class="w-6 h-6 text-sky-400 mb-2"></i>
-          <span class="text-sm font-semibold text-white group-hover:text-sky-400 transition">Google Calendar</span>
-          <span class="text-xs text-slate-400 mt-1">Book a Meeting</span>
-        </a>
-      </div>
-    </div>
-  </section>
+<!-- Contact Section -->
+<section id="contact" class="py-16 md:py-20 border-b border-[#17223b]/60">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<div class="inline-flex items-center justify-center p-3 rounded-full card-glass mb-4">
+<i data-lucide="send" class="w-6 h-6 text-sky-400"></i>
+</div>
+<h2 class="text-3xl font-bold tracking-tight text-white mb-2">Let's Connect</h2>
+<p class="text-slate-400 text-sm sm:text-base mb-2">📍 Location: Hyderabad, India</p>
+<p class="text-slate-400 text-sm max-w-lg mx-auto mb-8">Reach out directly via email, phone, WhatsApp, or reserve time directly on my Google Calendar.</p>
 
-  <!-- Footer -->
-  <footer class="py-8 bg-[#02050e] border-t border-[#17223b]/60 text-center text-xs sm:text-sm text-slate-500">
-    <div class="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p>© 2026 Syed Nayeem. All Rights Reserved.</p>
-      <div class="flex items-center space-x-6 text-slate-400">
-        <a href="https://www.linkedin.com/in/syed-nayeem/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">LinkedIn</a>
-        <a href="https://calendar.app.google/2A5CWPT3bHL5L34E7" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">Calendar</a>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=syednayeem.work@gmail.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">Email</a>
-      </div>
-    </div>
-  </footer>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+<!-- Email -->
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=syednayeem.work@gmail.com" target="_blank" rel="noopener noreferrer"
+class="p-4 card-glass rounded-xl hover:border-sky-500/70 transition group flex flex-col items-center shadow-sm">
+<i data-lucide="mail" class="w-6 h-6 text-sky-400 mb-2"></i>
+<span class="text-sm font-semibold text-white group-hover:text-sky-400 transition">Email Me</span>
+<span class="text-xs text-slate-400 mt-1">Let's Connect</span>
+</a>
+<!-- Call -->
+<a href="tel:+916303892404"
+class="p-4 card-glass rounded-xl hover:border-sky-500/70 transition group flex flex-col items-center shadow-sm">
+<i data-lucide="phone-call" class="w-6 h-6 text-amber-400 mb-2"></i>
+<span class="text-sm font-semibold text-white group-hover:text-sky-400 transition">Direct Call</span>
+<span class="text-xs text-slate-400 mt-1">+91 6303892404</span>
+</a>
+<!-- WhatsApp -->
+<a href="https://wa.me/916303892404" target="_blank" rel="noopener noreferrer"
+class="p-4 card-glass rounded-xl hover:border-sky-500/70 transition group flex flex-col items-center shadow-sm">
+<i data-lucide="message-circle" class="w-6 h-6 text-emerald-400 mb-2"></i>
+<span class="text-sm font-semibold text-white group-hover:text-sky-400 transition">WhatsApp</span>
+<span class="text-xs text-slate-400 mt-1">Chat Instantly</span>
+</a>
+<!-- Google Calendar -->
+<a href="https://calendar.app.google/2A5CWPT3bHL5L34E7" target="_blank" rel="noopener noreferrer"
+class="p-4 card-glass rounded-xl hover:border-sky-500/70 transition group flex flex-col items-center shadow-sm">
+<i data-lucide="calendar-check" class="w-6 h-6 text-sky-400 mb-2"></i>
+<span class="text-sm font-semibold text-white group-hover:text-sky-400 transition">Google Calendar</span>
+<span class="text-xs text-slate-400 mt-1">Book a Meeting</span>
+</a>
+</div>
+</div>
+</section>
 
-  <!-- Scripts: In-Page Card Toggle + Typing Animation -->
-  <script>
-    function toggleCard(id, arrowId) {
-      const panel = document.getElementById(id);
-      const arrow = document.getElementById(arrowId);
-      
-      if (panel.classList.contains('hidden')) {
-        panel.classList.remove('hidden');
-        arrow.classList.add('rotate-180');
-      } else {
-        panel.classList.add('hidden');
-        arrow.classList.remove('rotate-180');
-      }
-    }
+<!-- Footer -->
+<footer class="py-8 bg-[#02050e]/90 border-t border-[#17223b]/60 text-center text-xs sm:text-sm text-slate-500">
+<div class="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+<p>© 2026 Syed Nayeem. All Rights Reserved.</p>
+<div class="flex items-center space-x-6 text-slate-400">
+<a href="https://www.linkedin.com/in/syed-nayeem/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">LinkedIn</a>
+<a href="https://calendar.app.google/2A5CWPT3bHL5L34E7" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">Calendar</a>
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=syednayeem.work@gmail.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">Email</a>
+</div>
+</div>
+</footer>
 
-    // Step-by-Step Typing Effect for Metrics
-    function typeEffect(element, text, speed = 80) {
-      let index = 0;
-      element.classList.add('typing-cursor');
-      element.textContent = '';
-      
-      const timer = setInterval(() => {
-        if (index < text.length) {
-          element.textContent += text.charAt(index);
-          index++;
-        } else {
-          clearInterval(timer);
-          setTimeout(() => {
-            element.classList.remove('typing-cursor');
-          }, 1200);
-        }
-      }, speed);
-    }
+<!-- Scroll-to-Top Button -->
+<button id="scrollTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+class="hidden fixed bottom-6 right-6 p-3 rounded-full card-glass text-sky-400 hover:text-white hover:border-sky-500 transition shadow-lg z-40">
+<i data-lucide="arrow-up" class="w-5 h-5"></i>
+</button>
 
-    // Intersection Observer to trigger typing when scrolled into view
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const textElements = entry.target.querySelectorAll('.typing-text');
-          textElements.forEach((el, i) => {
-            const rawText = el.getAttribute('data-text');
-            setTimeout(() => {
-              typeEffect(el, rawText, 70);
-            }, i * 220);
-          });
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.3 });
+</div> <!-- End Page Content Wrapper -->
 
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('#experience .grid').forEach(grid => {
-        observer.observe(grid);
-      });
-      lucide.createIcons();
-    });
-  </script>
+<!-- Scripts: Interactive Canvas Engine + In-Page Accordions + Typing Effect -->
+<script>
+// -------------------------------------------------------------
+// 1. Dynamic Galaxy Nebula & Constellation Cursor Canvas Engine
+// -------------------------------------------------------------
+const canvas = document.getElementById('galaxyCanvas');
+const ctx = canvas.getContext('2d');
+
+let width = window.innerWidth;
+let height = window.innerHeight;
+canvas.width = width;
+canvas.height = height;
+
+window.addEventListener('resize', () => {
+width = window.innerWidth;
+height = window.innerHeight;
+canvas.width = width;
+canvas.height = height;
+initParticles();
+});
+
+const mouse = {
+x: null,
+y: null,
+radius: 230
+};
+
+window.addEventListener('mousemove', (e) => {
+mouse.x = e.clientX;
+mouse.y = e.clientY;
+});
+
+window.addEventListener('mouseleave', () => {
+mouse.x = null;
+mouse.y = null;
+});
+
+window.addEventListener('touchmove', (e) => {
+if (e.touches.length > 0) {
+mouse.x = e.touches[0].clientX;
+mouse.y = e.touches[0].clientY;
+}
+});
+
+window.addEventListener('touchend', () => {
+mouse.x = null;
+mouse.y = null;
+});
+
+// Cosmic Sparks on Click
+const clickSparks = [];
+window.addEventListener('click', (e) => {
+for (let i = 0; i < 16; i++) {
+clickSparks.push(new ClickSpark(e.clientX, e.clientY));
+}
+});
+
+class ClickSpark {
+constructor(x, y) {
+this.x = x;
+this.y = y;
+const angle = Math.random() * Math.PI * 2;
+const speed = Math.random() * 3 + 1;
+this.vx = Math.cos(angle) * speed;
+this.vy = Math.sin(angle) * speed;
+this.life = 1;
+this.decay = Math.random() * 0.03 + 0.02;
+this.color = Math.random() > 0.5 ? '#38bdf8' : '#a78bfa';
+}
+update() {
+this.x += this.vx;
+this.y += this.vy;
+this.life -= this.decay;
+}
+draw() {
+ctx.save();
+ctx.globalAlpha = Math.max(0, this.life);
+ctx.fillStyle = this.color;
+ctx.beginPath();
+ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
+ctx.fill();
+ctx.restore();
+}
+}
+
+class StarNode {
+constructor() {
+this.x = Math.random() * width;
+this.y = Math.random() * height;
+this.vx = (Math.random() - 0.5) * 0.6;
+this.vy = (Math.random() - 0.5) * 0.6;
+this.size = Math.random() * 1.8 + 0.8;
+this.baseAlpha = Math.random() * 0.6 + 0.2;
+this.alpha = this.baseAlpha;
+this.pulseSpeed = Math.random() * 0.02 + 0.005;
+this.color = Math.random() > 0.4 ? '#38bdf8' : (Math.random() > 0.5 ? '#818cf8' : '#ffffff');
+}
+update() {
+this.x += this.vx;
+this.y += this.vy;
+
+if (this.x < 0) this.x = width;
+if (this.x > width) this.x = 0;
+if (this.y < 0) this.y = height;
+if (this.y > height) this.y = 0;
+
+this.alpha += Math.sin(Date.now() * this.pulseSpeed) * 0.005;
+this.alpha = Math.max(0.1, Math.min(0.8, this.alpha));
+}
+draw() {
+ctx.save();
+ctx.globalAlpha = this.alpha;
+ctx.fillStyle = this.color;
+ctx.beginPath();
+ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+ctx.fill();
+ctx.restore();
+}
+}
+
+let stars = [];
+function initParticles() {
+stars = [];
+const particleCount = Math.floor((width * height) / 5000);
+for (let i = 0; i < Math.min(particleCount, 220); i++) {
+stars.push(new StarNode());
+}
+}
+initParticles();
+
+function animateGalaxy() {
+ctx.clearRect(0, 0, width, height);
+
+// Deep galactic space gradient
+const bgGrad = ctx.createRadialGradient(width * 0.5, height * 0.3, 50, width * 0.5, height * 0.4, Math.max(width, height) * 0.85);
+bgGrad.addColorStop(0, '#0a1026');
+bgGrad.addColorStop(0.5, '#040714');
+bgGrad.addColorStop(1, '#02040a');
+ctx.fillStyle = bgGrad;
+ctx.fillRect(0, 0, width, height);
+
+// Draw Star Nodes & Natural Constellation Lines
+for (let i = 0; i < stars.length; i++) {
+stars[i].update();
+stars[i].draw();
+
+for (let j = i + 1; j < stars.length; j++) {
+const dx = stars[i].x - stars[j].x;
+const dy = stars[i].y - stars[j].y;
+const dist = Math.sqrt(dx * dx + dy * dy);
+
+if (dist < 130) {
+ctx.save();
+ctx.globalAlpha = (1 - dist / 130) * 0.22;
+ctx.strokeStyle = '#38bdf8';
+ctx.lineWidth = 0.7;
+ctx.beginPath();
+ctx.moveTo(stars[i].x, stars[i].y);
+ctx.lineTo(stars[j].x, stars[j].y);
+ctx.stroke();
+ctx.restore();
+}
+}
+
+// Magnetic Cursor Spiderweb Lines
+if (mouse.x !== null && mouse.y !== null) {
+const mdx = stars[i].x - mouse.x;
+const mdy = stars[i].y - mouse.y;
+const mDist = Math.sqrt(mdx * mdx + mdy * mdy);
+
+if (mDist < mouse.radius) {
+ctx.save();
+const alpha = (1 - mDist / mouse.radius) * 0.75;
+ctx.globalAlpha = alpha;
+ctx.strokeStyle = '#38bdf8';
+ctx.lineWidth = 1.1;
+ctx.beginPath();
+ctx.moveTo(stars[i].x, stars[i].y);
+ctx.lineTo(mouse.x, mouse.y);
+ctx.stroke();
+ctx.restore();
+}
+}
+}
+
+// Draw Click Sparks
+for (let k = clickSparks.length - 1; k >= 0; k--) {
+clickSparks[k].update();
+clickSparks[k].draw();
+if (clickSparks[k].life <= 0) {
+clickSparks.splice(k, 1);
+}
+}
+
+requestAnimationFrame(animateGalaxy);
+}
+animateGalaxy();
+
+// -------------------------------------------------------------
+// 2. In-Page Interactive Accordions & Navigation Handlers
+// -------------------------------------------------------------
+function toggleCard(id, arrowId) {
+const panel = document.getElementById(id);
+const arrow = document.getElementById(arrowId);
+if (panel.classList.contains('hidden')) {
+panel.classList.remove('hidden');
+arrow.classList.add('rotate-180');
+} else {
+panel.classList.add('hidden');
+arrow.classList.remove('rotate-180');
+}
+}
+
+function toggleMobileNav() {
+const nav = document.getElementById('mobileNav');
+nav.classList.toggle('hidden');
+}
+
+// Scroll-to-Top Button Visibility
+window.addEventListener('scroll', () => {
+const btn = document.getElementById('scrollTopBtn');
+if (window.scrollY > 400) {
+btn.classList.remove('hidden');
+} else {
+btn.classList.add('hidden');
+}
+});
+
+// Typing Effect for Key Highlights
+function typeEffect(element, text, speed = 80) {
+let index = 0;
+element.classList.add('typing-cursor');
+element.textContent = '';
+const timer = setInterval(() => {
+if (index < text.length) {
+element.textContent += text.charAt(index);
+index++;
+} else {
+clearInterval(timer);
+setTimeout(() => {
+element.classList.remove('typing-cursor');
+}, 1200);
+}
+}, speed);
+}
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+const textElements = entry.target.querySelectorAll('.typing-text');
+textElements.forEach((el, i) => {
+const rawText = el.getAttribute('data-text');
+setTimeout(() => {
+typeEffect(el, rawText, 70);
+}, i * 220);
+});
+observer.unobserve(entry.target);
+}
+});
+}, { threshold: 0.3 });
+
+document.addEventListener('DOMContentLoaded', () => {
+document.querySelectorAll('#experience .grid').forEach(grid => {
+observer.observe(grid);
+});
+lucide.createIcons();
+});
+</script>
 </body>
 </html>
